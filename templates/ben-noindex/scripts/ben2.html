@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	overflow:hidden;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+</style>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> 
+<link rel="stylesheet" href="//code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+<script src = "//code.jquery.com/jquery.min.js"></script>
+<script src="//code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+<script src = "code/jquery.imgpreload.min.js"></script>
+<script type="text/javascript">
+	function BlockMove(event) {
+ 	 	event.preventDefault() ;
+	 }
+$(document).ready(function () {
+	
+	$("#scoreText").text(0)
+	
+	var theScore = 0
+	
+	var labelArray = new Array()
+	labelArray[1] = new Array('Enforces Laws','Commands Military','President','White House','Article II','Vetos Bills','Creates Budget','Cabinet','4 Year Term','Foreign Policy')
+	
+	$.fn.hitTestObject = function(obj){
+ 
+   		var bounds = this.offset();
+   			bounds.right = bounds.left + this.outerWidth();
+    		bounds.bottom = bounds.top + this.outerHeight();
+ 
+    	var compare = obj.offset();
+    		compare.right = compare.left + obj.outerWidth();
+    		compare.bottom = compare.top + obj.outerHeight();
+ 
+    	return (!(compare.right < bounds.left ||
+        	compare.left > bounds.right ||
+        	compare.bottom < bounds.top ||
+        	compare.top > bounds.bottom));
+ 
+	}
+	
+	$("#game").css('visibility','hidden')
+	
+	jQuery.imgpreload(['ben_right.png','ben_left.png','ben_center.png','voteDrop.png','ben_right_green.png','ben_left_green.png','legislative_background.jpg','judicial_background.jpg','executive_back.jpg'],
+	{
+		each: function()
+		{
+		},
+		all: function()
+		{
+			theScore = 0
+			$("#theBasket").css('opacity',0)
+			$("#game").css('visibility','visible')
+			t = setTimeout(benMover,1000);
+		}
+	});
+	
+	var t
+	var currentBen = "center"
+	var mousePos = 293
+	var dropCount=0
+	var dropNameCount=0
+	var basketState = ''
+	var basketCount = 0
+	
+	$("#game").mousedown( function(event) {
+		event.preventDefault();
+	})
+	$("#ben").mousedown( function(event) {
+		event.preventDefault();
+	})
+	
+	if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/Android/i))) {
+		$("#game").bind('vmousemove', function(e){
+			mousePos = e.clientX-103
+		})
+	} else {
+		$("#game").mousemove(function(e){
+	 	 mousePos = e.clientX-103
+   		});
+	}
+	
+	function scoreFunc(theNum) {
+		theScore = theScore+theNum
+		$("#scoreText").text(theScore)
+	}
+	
+	function benMover() {
+		basketCount++
+		if (basketCount==5) {
+			basketState = ''
+			if (currentBen=='left') {
+				$('#ben').attr('src', 'ben_left.png');
+			} else {
+				$('#ben').attr('src', 'ben_right.png');
+			}
+		}
+		if (mousePos<$("#ben").position().left&&(currentBen == "right"||currentBen == "center")) {
+			if (basketState=='green') {
+				$('#ben').attr('src', 'ben_left_green.png');
+			} else {
+				$('#ben').attr('src', 'ben_left.png');
+			}
+			currentBen = "left"
+		}
+		if (mousePos>$("#ben").position().left&&(currentBen == "left"||currentBen == "center")) {
+			if (basketState=='green') {
+				$('#ben').attr('src', 'ben_right_green.png');
+			} else {
+				$('#ben').attr('src', 'ben_right.png');
+			}
+			currentBen = "right"
+		}
+		$("#ben").css("left",$("#ben").position().left+((mousePos-$("#ben").position().left)/3))
+		if (currentBen=='right') {
+			$("#theBasket").css('left',$("#ben").position().left+90)
+		} else if (currentBen=='left') {
+			$("#theBasket").css('left',$("#ben").position().left+5)
+		}
+		t = setTimeout(benMover,40);
+		dropCount++
+		if (dropCount==15) {
+			dropCount = 0
+			dropNameCount++
+			$("#iconHolder").append("<img id='drop"+dropNameCount+"' src='voteDrop.png' style='position: absolute; top: -100px; left: "+(Math.floor(Math.random()*731))+"px' />")
+			$('#drop'+dropNameCount).animate({
+				top: 600},{
+				duration: Math.floor(Math.random()*1500)+3500,
+				step: function(){
+					var tempX = $(this).position().left
+					var benX = $("#ben").position().left
+					var tempY = $(this).position().top
+					if ($(this).hitTestObject($("#theBasket"))) {
+						// $("#trace").text('hit')
+						// $(this).stop()
+						basketState = 'green'
+						basketCount = 0
+						if (currentBen=='left') {
+							$('#ben').attr('src', 'ben_left_green.png');
+						} else {
+							$('#ben').attr('src', 'ben_right_green.png');
+						}
+						scoreFunc(50)
+						$(this).remove()
+					} else {
+						if (tempY>=420) {
+							// $(this).stop()
+							$(this).remove()
+							// $(this).css('visibility','hidden')
+						}
+					}
+				},
+				complete: function(){
+					// $(this).stop()
+					$(this).remove()
+					// $(this).css('visibility','hidden')
+				}
+			})
+		}
+	}
+})
+</script>
+</head>
+
+<body style="margin-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; -webkit-user-select: none;" ontouchmove="BlockMove(event);" >
+<div id="game" style="position:absolute; top:0px; left:0px; width:800px; height: 600px; background-color:#CFF">
+<img id="theBackground" src="executive_back.jpg" width="800" height="600" style="position:absolute; top:0px; left:0px; z-index:5;" /> <img src="ben_center.png" width="189" height="206" id="ben" style="position: absolute; top: 233px; left: 293px; z-index:10" />
+<div id="iconHolder" style="position:absolute; top:0px; left:0px; width:800px; height:600px; z-index:50"></div>
+<div id="theBasket" style="position:absolute; top:346px; left:335px; height:10px; width:94px; z-index:100; background-color:#FF0000"></div>
+<img id="theFrame" src="frame.png" width="800" height="600" style="position:absolute; z-index: 500; top:0px; left:0px" />
+<div id="scoreHolder" style="position:absolute; top: 16px; left: 649px; width: 101px; height: 86px; z-index: 700"><img src="score_badge.png" width="101" height="86" />
+  <div id="scoreText" style="position:absolute; top:9px; left: 6px; width: 86px; height: 30px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 24px; color: #FFF; color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">2500</div></div>
+  <div id="tileHolder" style="position:absolute; top:485px; left:41px; height:130px; width:720px; z-index:750">
+  <div id="tile1" style="position:absolute; top:0px; left: 0px; width: 72px; height: 130px;"><img src="silver_tile.png" width="72" height="74" /><br />
+  <div id="tileText1" style="font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 12px; color: #FFF; color: white;">2500</div></div>
+  <div id="tile2" style="position:absolute; top:0px; left: 72px; width: 72px; height: 130px;"><img src="silver_tile.png" width="72" height="74" /><br />
+  <div id="tileText2" style="font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 12px; color: #FFF; color: white;">2500</div></div>
+  <div id="tile3" style="position:absolute; top:0px; left: 144px; width: 72px; height: 130px;"><img src="silver_tile.png" width="72" height="74" /><br />
+  <div id="tileText3" style="font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 12px; color: #FFF; color: white;">2500</div></div>
+  <div id="tile4" style="position:absolute; top:0px; left: 216px; width: 72px; height: 130px;"><img src="silver_tile.png" width="72" height="74" /><br />
+  <div id="tileText4" style="font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 12px; color: #FFF; color: white;">2500</div></div>
+  <div id="tile5" style="position:absolute; top:0px; left: 288px; width: 72px; height: 130px;"><img src="silver_tile.png" width="72" height="74" /><br />
+  <div id="tileText5" style="font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 12px; color: #FFF; color: white;">2500</div></div>
+  <div id="tile6" style="position:absolute; top:0px; left: 360px; width: 72px; height: 130px;"><img src="silver_tile.png" width="72" height="74" /><br />
+  <div id="tileText6" style="font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 12px; color: #FFF; color: white;">2500</div></div>
+  <div id="tile7" style="position:absolute; top:0px; left: 432px; width: 72px; height: 130px;"><img src="silver_tile.png" width="72" height="74" /><br />
+  <div id="tileText7" style="font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 12px; color: #FFF; color: white;">2500</div></div>
+  <div id="tile8" style="position:absolute; top:0px; left: 504px; width: 72px; height: 130px;"><img src="silver_tile.png" width="72" height="74" /><br />
+  <div id="tileText8" style="font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 12px; color: #FFF; color: white;">2500</div></div>
+  <div id="tile9" style="position:absolute; top:0px; left: 576px; width: 72px; height: 130px;"><img src="silver_tile.png" width="72" height="74" /><br />
+  <div id="tileText9" style="font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 12px; color: #FFF; color: white;">2500</div></div>
+  <div id="tile10" style="position:absolute; top:0px; left: 648px; width: 72px; height: 130px;"><img src="silver_tile.png" width="72" height="74" /><br />
+  <div id="tileText10" style="font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 12px; color: #FFF; color: white;">2500</div></div>
+  </div>
+<div id="trace" style="position:absolute; top:568px; left: 2px; width: 200px; height: 30px">test</div></div>
+</body>
+</html>

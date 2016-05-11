@@ -1,0 +1,9 @@
+<p> </p>
+<p style="text-align: center;"><a class="newwindow" title="Link to Place the States" href="states5/" target="_blank"><img src="images/place-the-state.png" alt="" width="401" height="315" /></a></p>
+<p>Download and solve these fun crosswords and word searches!</p>
+<p style="text-align: center;"><a title="Link to printable activities" href="index.php" target="_self"> <img src="images/printable-activities-game-panel-purple.png" alt="word search game 
+
+panel wide green" width="420" height="315" /></a></p>
+<p>Test your knowledge of the three branches of the U.S. Government!</p>
+<p class="gameimgmobile" style="text-align: center;"><img style="border: 0; vertical-align: middle;" src="templates/bentest/images/gamescreen.png" alt="" /></p>
+<p style="text-align: center;"><a class="newwindow" title="Branch O Mania" href="templates/bentest/games/Branch-O-Mania/ben.html?TB_iframe=true&amp;height=600&amp;width=1000" rel="sexylightbox"><img src="templates/bentest/images/gamescreen.png" alt="" /> </a></p>

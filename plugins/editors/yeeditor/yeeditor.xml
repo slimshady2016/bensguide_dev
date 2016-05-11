@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="editors" method="upgrade">
+	<name>PLG_EDITORS_YEEDITOR</name>
+	<creationDate>DEC 6 2013</creationDate>
+	<author>YEEDEEN</author>
+	<authorEmail>N/A</authorEmail>
+	<authorUrl>http://yeeditor.com</authorUrl>
+	<copyright>Copyright (C) 2013</copyright>
+	<license>GNU General Public License version 2 or later; see http://yeedeen.com/license</license>
+	<version>2.01</version>
+	<description>PLG_EDITORS_YEEDITOR_DESCRIPTION</description>
+	
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	
+	<files>
+		<filename plugin="yeeditor">yeeditor.php</filename>
+		<filename>index.html</filename>	
+		<filename>define.php</filename>	
+		<folder>assets</folder>
+		<folder>sql</folder>
+		<folder>include</folder>
+		<folder>blocks</folder>
+	</files>
+	<languages folder="language/en-GB">
+		<language tag="en-GB">en-GB.plg_editors_yeeditor.ini</language>
+		<language tag="en-GB">en-GB.plg_editors_yeeditor.sys.ini</language>
+	</languages>
+	
+	
+</extension>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>Ajax Quiz</name>
+	<author>WebKul</author>
+	<creationDate>07/07/2011</creationDate>	
+	<copyright>This extension in released under the GNU/GPL License</copyright>
+	<authorEmail>prakash.sahu@gmail.com</authorEmail>
+	<authorUrl>http://www.webkul.com</authorUrl>
+	<version>2.0</version>
+	<description>Ajax Quiz Installed</description>
+	<files>
+		<filename module="mod_ajaxquiz">mod_ajaxquiz.php</filename>
+		<filename module="mod_ajaxquiz">helper.php</filename>
+		<folder>image</folder>
+		<folder>js</folder>
+		<folder>css</folder>
+	</files>
+	<languages>
+                <language tag="en-GB">languages/en-GB.mod_ajaxquiz.ini</language>
+				<language tag="en-GB">languages/en-GB.mod_ajaxquiz.sys.ini</language>
+				<language tag="nl-NL">languages/nl-NL.mod_ajaxquiz.ini</language>
+				<language tag="nl-NL">languages/nl-NL.mod_ajaxquiz.sys.ini</language>
+        </languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="categoryid" type="sql" default="5" label="SELECT_QUIZ" query="SELECT id, title FROM #__ajaxquiz_category" key_field="id" value_field="title" description="SELECT_QUIZ" />
+				
+				<field name="loadjquery" type="list" default="None" label="LOAD_DESC" description="LOAD_DESC">
+					<option value="None">NONE_E</option>
+					<option value="Head">HEAD</option>
+					<option value="Inline">INLINE</option>
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>			
+		</fields>
+	</config>
+</extension>

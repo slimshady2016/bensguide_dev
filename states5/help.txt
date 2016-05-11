@@ -1,0 +1,5 @@
+		
+	To move a state, click and drag it to its place on the map.
+When the state is placed where it belongs, you will hear a sound and see stars on Ben’s map. 
+To make the game easier, click on the “Lines” button to reveal the outlines of
+the states on the map.

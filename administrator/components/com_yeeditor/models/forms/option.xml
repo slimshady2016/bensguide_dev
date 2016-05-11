@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset
+		name="params"
+		label="CONFIG_SITE_SETTINGS_LABEL">
+
+		<field name="combine_widgets_css" type="button"
+			value="Combine CSS"
+			description="COM_YEEDITOR_FIELD_OPTION_COMBINE_CSS_DESC"
+			label="COM_YEEDITOR_FIELD_OPTION_COMBINE_CSS"/>
+					
+		<field name="font_awesome" type="radio"
+			class="btn-group btn-group-yesno"
+			default="1"
+			description=""
+			label="COM_YEEDITOR_FIELD_OPTION_FONT_AWESOME"
+		>
+			<option value="0">JNo</option>
+			<option value="1">JYes</option>
+		</field>
+		
+		<field name="other_editor" 
+			type="plugins"
+			folder="editors"
+			default="tinymce"
+			label="COM_YEEDITOR_FIELD_OPTION_LOAD_OTHER_EDITOR"
+			description="COM_YEEDITOR_FIELD_OPTION_LOAD_OTHER_EDITOR_DESC"/>
+	</fieldset>
+</form>

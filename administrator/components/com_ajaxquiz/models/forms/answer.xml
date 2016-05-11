@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+	<field
+		name="title"
+		type="textarea"
+		label="COM_AJAXQUIZ_ANSWER_TITLE"
+		description="COM_AJAXQUIZ_ANSWER_TITLE_DESC"
+		class="inputbox"
+		required="true"
+		cols="30" rows="3"
+		/>
+		
+	<field
+		name="qid"
+		type="queslist"
+		label="COM_AJAXQUIZ_QUESTION"
+		description="COM_AJAXQUIZ_QUESTION_DESC"
+		class="inputbox" required="true"
+		addfieldpath="/administrator/components/com_ajaxquiz/models/fields" />	
+		
+	<field name="right_answer" type="radio" default="1" label="COM_AJAXQUIZ_RIGHT_ANSWER" description="COM_AJAXQUIZ_RIGHT_ANSWER_DESC">
+			<option value="0">ARG_NO</option>
+			<option value="1">ARG_YES</option>
+	</field>	
+
+	<field
+		name="published"
+		type="list"
+		class="inputbox"
+		default="1"
+		size="1"
+		label="JSTATUS"
+		description="JFIELD_PUBLISHED_DESC">
+		<option
+			value="1">
+			JPUBLISHED</option>
+		<option
+			value="0">
+			JUNPUBLISHED</option>
+	</field>
+	
+	<field name="id" type="text" default="0"
+			readonly="true" class="readonly"
+			label="JGLOBAL_FIELD_ID_LABEL" 	description ="JGLOBAL_FIELD_ID_DESC" />
+
+
+		
+</form>

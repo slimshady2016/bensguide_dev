@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="template">
+        <name>Ben's Guide - Age 4 to 8</name>
+        <creationDate>March 2013</creationDate>
+        <author>Virtual Mind</author>
+        <authorEmail>email@email.com</authorEmail>
+        <authorUrl>http://www.url.com</authorUrl>
+        <copyright>copyright</copyright>
+        <version>1.0.1</version>
+        <description>Ben's Guide - Age 4 to 8</description>
+        <files>
+                <filename>index.php</filename>
+                <filename>templateDetails.xml</filename>
+                <folder>images</folder>
+                <folder>css</folder>
+				<folder>js</folder>
+                <folder>scripts</folder>
+				<folder>html</folder>
+        </files>
+        <positions>
+                <position>mobileNav</position>
+				<position>mobileNav9-13</position>
+				<position>mobileNav14more</position>
+                <position>top-nav-left</position>
+                <position>top-nav-right</position>
+                <position>main-menu</position>
+				<position>main-menu9-13</position>
+				<position>main-menu14more</position>
+                <position>badge-menu</position>
+				<position>learn-more</position>
+				<position>learning-menu4-8</position>
+				<position>learning-menu9-13</position>
+				<position>learning-menu14more</position>
+        </positions>
+</extension>

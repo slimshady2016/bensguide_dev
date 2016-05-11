@@ -1,0 +1,910 @@
+div.yee {
+float: left;
+margin-top: 5px;
+display: block;
+width: 100%;
+  /* CSS Document */
+ 
+  /*YEE Group*/
+ 
+  /* Mini layout previews
+-------------------------------------------------- */
+ 
+  /*YE Header*/
+ 
+  /*Column*/
+ 
+  /*Buttons*/
+ 
+}
+@charset "UTF-8";
+div.yee .yee_group_1,
+div.yee .yee_group_2,
+div.yee .yee_group_3,
+div.yee .yee_group_4,
+div.yee .yee_group_5 {
+  min-height: 103px;
+  margin-bottom: 10px;
+}
+div.yee .ui-sortable-placeholder {
+  visibility: visible !important;
+  background: #fff !important;
+  min-height: 103px !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.75) !important;
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.75) !important;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.75) !important;
+  margin-bottom: 10px !important;
+  border-bottom: 1px solid #FFF;
+}
+div.yee .ui-sortable-helper {
+  width: 100px !important;
+  height: 46px !important;
+  overflow: hidden;
+}
+div.yee .first.ui-sortable-placeholder {
+  margin-left: 0 !important;
+}
+div.yee .yee_group_1 [class*="span"] {
+  padding: 20px 10px 0px;
+  /* border: 1px dotted black; */
+}
+div.yee .yee_group_2 [class*="span"] {
+  padding: 20px 10px 0px;
+}
+div.yee .yee_group_3 [class*="span"] {
+  padding: 20px 10px 0px;
+}
+div.yee .yee_group_4 [class*="span"] {
+  padding: 20px 10px 0px;
+}
+div.yee .yee_group_5 [class*="span"] {
+  padding: 20px 10px 0px;
+}
+div.yee .empty .span12 {
+  height: 10px;
+  background: none;
+  border: 0;
+}
+div.yee .yee_settings {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+div.yee .yee_box {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+}
+div.yee .yee_box {
+  margin-bottom: 20px;
+}
+div.yee .yee_box .yee_header {
+  padding-top: 1px;
+  position: relative;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+div.yee .yee_box.fluid .yee_box-sidebar {
+  background-color: #bbd8e9;
+  width: 20%;
+}
+div.yee .yee_box.fluid .yee_box-body {
+  width: 77.5%;
+  margin-left: 2.5%;
+}
+div.yee .widget_content h5 {
+  font-size: 10px;
+  line-height: 9px;
+  text-transform: uppercase;
+  margin: 4px 0 0;
+}
+div.yee .widget_content p {
+  margin: 0;
+  padding: 7px 0 0;
+  font-size: 10px;
+  line-height: 9px;
+}
+div.yee .yee_header {
+  margin: -20px -10px 10px;
+}
+div.yee .yee_header span {
+  font-size: 12px;
+  margin: 0;
+  line-height: 20px;
+  cursor: default;
+}
+div.yee .yee_header .btn-toolbar {
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+div.yee .yee_outter_header,
+div.yee .yee_header {
+  padding: 0 12px 2px;
+  line-height: 20px;
+  color: #333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: default;
+  background: #e7e7e7;
+  /* Old browsers */
+ 
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+ 
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U3ZTdlNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiN2I3YjciIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #e7e7e7 0%, #b7b7b7 100%);
+  /* FF3.6+ */
+ 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e7e7e7), color-stop(100%, #b7b7b7));
+  /* Chrome,Safari4+ */
+ 
+  background: -webkit-linear-gradient(top, #e7e7e7 0%, #b7b7b7 100%);
+  /* Chrome10+,Safari5.1+ */
+ 
+  background: -o-linear-gradient(top, #e7e7e7 0%, #b7b7b7 100%);
+  /* Opera 11.10+ */
+ 
+  background: -ms-linear-gradient(top, #e7e7e7 0%, #b7b7b7 100%);
+  /* IE10+ */
+ 
+  background: linear-gradient(to bottom, #e7e7e7 0%, #b7b7b7 100%);
+  /* W3C */
+ 
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#e7e7e7', endColorstr='#b7b7b7', GradientType=0);
+  /* IE6-8 */
+ 
+  *zoom: 1;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  border-bottom: 1px solid #aaa;
+  -webkit-box-shadow: 0 1px 0px #ffffff;
+  -moz-box-shadow: 0 1px 0px #ffffff;
+  box-shadow: 0 1px 0px #ffffff;
+}
+div.yee .yee_header .ui-icon {
+  margin-top: 2px;
+}
+div.yee .yee_header .ui-icon-right {
+  float: right;
+}
+div.yee .yee_header .ui-icon-left {
+  float: left;
+}
+div.yee .yee_outter_header {
+  position: relative;
+  margin: 0;
+}
+div.yee .yee_column [class*="span"] {
+  margin-bottom: 10px;
+}
+div.yee .ui-icon.ui-icon-column_grid {
+  background: url("../img/column-grid.png") no-repeat;
+  width: 24px;
+  height: 24px;
+  display: block;
+  padding: 0 5px;
+  margin: 4px 0;
+}
+div.yee span.ui-icon.ui-icon-column_grid {
+  border-right: 1px solid #b2b2b2;
+}
+div.yee .inner-container {
+  padding: 20px 20px 0;
+}
+div.yee .yee_buttons {
+  width: 100%;
+}
+div.yee .yee_inner_header.btn-toolbar .btn-group,
+div.yee .yee_buttons .yee_btn-columns {
+  background: #f2f2f2;
+  /* Old browsers */
+ 
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+ 
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiZmJmYmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #f2f2f2 0%, #bfbfbf 100%);
+  /* FF3.6+ */
+ 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #bfbfbf));
+  /* Chrome,Safari4+ */
+ 
+  background: -webkit-linear-gradient(top, #f2f2f2 0%, #bfbfbf 100%);
+  /* Chrome10+,Safari5.1+ */
+ 
+  background: -o-linear-gradient(top, #f2f2f2 0%, #bfbfbf 100%);
+  /* Opera 11.10+ */
+ 
+  background: -ms-linear-gradient(top, #f2f2f2 0%, #bfbfbf 100%);
+  /* IE10+ */
+ 
+  background: linear-gradient(to bottom, #f2f2f2 0%, #bfbfbf 100%);
+  /* W3C */
+ 
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#bfbfbf', GradientType=0);
+  /* IE6-8 */
+ 
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 0px #ffffff;
+  -moz-box-shadow: 0 1px 0px #ffffff;
+  box-shadow: 0 1px 0px #ffffff;
+  -moz-box-shadow: inset 0 0 2px 0 #fff;
+  -webkit-box-shadow: inset 0 0 2px 0 #fff;
+  box-shadow: inset 0 0 2px 0 #fff;
+}
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn {
+  background: #f2f2f2 !important;
+  /* Old browsers */
+ 
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+ 
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YyZjJmMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiZmJmYmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #f2f2f2 0%, #bfbfbf 100%) !important;
+  /* FF3.6+ */
+ 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #bfbfbf)) !important;
+  /* Chrome,Safari4+ */
+ 
+  background: -webkit-linear-gradient(top, #f2f2f2 0%, #bfbfbf 100%) !important;
+  /* Chrome10+,Safari5.1+ */
+ 
+  background: -o-linear-gradient(top, #f2f2f2 0%, #bfbfbf 100%) !important;
+  /* Opera 11.10+ */
+ 
+  background: -ms-linear-gradient(top, #f2f2f2 0%, #bfbfbf 100%) !important;
+  /* IE10+ */
+ 
+  background: linear-gradient(to bottom, #f2f2f2 0%, #bfbfbf 100%) !important;
+  /* W3C */
+ 
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#bfbfbf', GradientType=0) !important;
+  /* IE6-8 */
+ 
+  -moz-box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, 0.5) !important;
+  -webkit-box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, 0.5) !important;
+  box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, 0.5) !important;
+  border-color: #7e7e7e !important;
+  padding: 2px 6px 3px !important;
+  color:inherit !important;
+}
+div.yee .yee_inner_header.btn-toolbar .btn-group.open .btn,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn:active,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn.active {
+  background: #777777 !important;
+  /* Old browsers */
+ 
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+ 
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzc3Nzc3NyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5YTlhOWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #777777 0%, #9a9a9a 100%) !important;
+  /* FF3.6+ */
+ 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #777777), color-stop(100%, #9a9a9a)) !important;
+  /* Chrome,Safari4+ */
+ 
+  background: -webkit-linear-gradient(top, #777777 0%, #9a9a9a 100%) !important;
+  /* Chrome10+,Safari5.1+ */
+ 
+  background: -o-linear-gradient(top, #777777 0%, #9a9a9a 100%) !important;
+  /* Opera 11.10+ */
+ 
+  background: -ms-linear-gradient(top, #777777 0%, #9a9a9a 100%) !important;
+  /* IE10+ */
+ 
+  background: linear-gradient(to bottom, #777777 0%, #9a9a9a 100%) !important;
+  /* W3C */
+ 
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#777777', endColorstr='#9a9a9a', GradientType=0) !important;
+  /* IE6-8 */
+ 
+  -moz-box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.5) !important;
+  -webkit-box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.5) !important;
+  box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.5) !important;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.75) !important;
+}
+div.yee [class^="yee_icon-"],
+div.yee [class*=" yee_icon-"] {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-top: 1px;
+  *margin-right: .3em;
+  line-height: 16px;
+  vertical-align: text-top;
+  background-image: url("../img/column-grid.png");
+  background-position: 14px 14px;
+  background-repeat: no-repeat;
+}
+div.yee .yee_icon-grid01 {
+  background-position: -5px -2px;
+}
+div.yee .yee_icon-grid02 {
+  background-position: -21px -2px;
+}
+div.yee .yee_icon-grid03 {
+  background-position: -37px -2px;
+}
+div.yee .yee_icon-grid04 {
+  background-position: -53px -2px;
+}
+div.yee .yee_icon-grid05 {
+  background-position: -69px -2px;
+}
+div.yee .yee_icon-grid06 {
+  background-position: -85px -2px;
+}
+div.yee .yee_icon-grid07 {
+  background-position: -101px -2px;
+}
+div.yee .yee_icon-grid08 {
+  background-position: -117px -2px;
+}
+div.yee .yee_icon-grid09 {
+  background-position: -133px -2px;
+}
+div.yee .yee_icon-grid10 {
+  background-position: -148px -2px;
+}
+div.yee .active .yee_icon-grid01,
+div.yee .dropdown-menu li:hover .yee_icon-grid01,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn:active .yee_icon-grid01,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn.active .yee_icon-grid01 {
+  background-position: -5px -18px;
+}
+div.yee .active .yee_icon-grid02,
+div.yee .dropdown-menu li:hover .yee_icon-grid02,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn:active .yee_icon-grid02,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn.active .yee_icon-grid02 {
+  background-position: -21px -18px;
+}
+div.yee .active .yee_icon-grid03,
+div.yee .dropdown-menu li:hover .yee_icon-grid03,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn:active .yee_icon-grid03,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn.active .yee_icon-grid03 {
+  background-position: -37px -18px;
+}
+div.yee .active .yee_icon-grid04,
+div.yee .dropdown-menu li:hover .yee_icon-grid04,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn:active .yee_icon-grid04,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn.active .yee_icon-grid04 {
+  background-position: -53px -18px;
+}
+div.yee .active .yee_icon-grid05,
+div.yee .dropdown-menu li:hover .yee_icon-grid05,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn:active .yee_icon-grid05,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn.active .yee_icon-grid05 {
+  background-position: -69px -18px;
+}
+div.yee .active .yee_icon-grid06,
+div.yee .dropdown-menu li:hover .yee_icon-grid06,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn:active .yee_icon-grid06,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn.active .yee_icon-grid06 {
+  background-position: -85px -18px;
+}
+div.yee .active .yee_icon-grid07,
+div.yee .dropdown-menu li:hover .yee_icon-grid07,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn:active .yee_icon-grid07,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn.active .yee_icon-grid07 {
+  background-position: -101px -18px;
+}
+div.yee .active .yee_icon-grid08,
+div.yee .dropdown-menu li:hover .yee_icon-grid08,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn:active .yee_icon-grid08,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn.active .yee_icon-grid08 {
+  background-position: -117px -18px;
+}
+div.yee .active .yee_icon-grid09,
+div.yee .dropdown-menu li:hover .yee_icon-grid09,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn:active .yee_icon-grid09,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn.active .yee_icon-grid09 {
+  background-position: -133px -18px;
+}
+div.yee .active .yee_icon-grid10,
+div.yee .dropdown-menu li:hover .yee_icon-grid10,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn:active .yee_icon-grid10,
+div.yee .yee_inner_header.btn-toolbar .btn-group .btn.active .yee_icon-grid10 {
+  background-position: -148px -18px;
+}
+div.yee .icon-clone {
+  background-position: 0 -168px;
+}
+div.yee .yee_header .dropdown-menu {
+  text-align: left;
+  font-size: 11px;
+}
+div.yee .yee_header .dropdown-menu > li > a {
+  padding: 2px 15px;
+}
+div.yee .plugin-modal {
+  width: 760px;
+  margin-left: -380px;
+}
+div.yee .plugin-modal .modal-header {
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+div.yee .plugin-modal .modal-body {
+  padding: 0;
+}
+div.yee .plugin-modal .modal-header h3 {
+	color: inherit !important;
+	font-size: 11px !important;
+	line-height: 25px !important;
+	margin: inherit !important;
+}
+div.yee .plugin-modal .nav {
+  margin-bottom: 0;
+  margin-right: 0;
+  border-right: 0;
+}
+div.yee .plugin-modal .tabs-left > .nav-tabs > li > a {
+  font-size: 11px;
+  font-weight: bold;
+  color: #000;
+  text-shadow: 0 1px 0 #ffffff;
+  padding: 2px 10px;
+  margin-bottom: 0;
+}
+div.yee .plugin-modal .tabs-left > .nav-tabs .active > a,
+div.yee .plugin-modal .tabs-left > .nav-tabs .active > a:hover,
+div.yee .plugin-modal .tabs-left > .nav-tabs .active > a:focus {
+  border-color: transparent #b4b4b4 transparent transparent !important;
+  background: #69bae6 !important;
+  /* Old browsers */
+ 
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+ 
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY5YmFlNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMjhkY2YiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #69bae6 0%, #328dcf 100%) !important;
+  /* FF3.6+ */
+ 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #69bae6), color-stop(100%, #328dcf)) !important;
+  /* Chrome,Safari4+ */
+ 
+  background: -webkit-linear-gradient(top, #69bae6 0%, #328dcf 100%) !important;
+  /* Chrome10+,Safari5.1+ */
+ 
+  background: -o-linear-gradient(top, #69bae6 0%, #328dcf 100%) !important;
+  /* Opera 11.10+ */
+ 
+  background: -ms-linear-gradient(top, #69bae6 0%, #328dcf 100%) !important;
+  /* IE10+ */
+ 
+  background: linear-gradient(to bottom, #69bae6 0%, #328dcf 100%) !important;
+  /* W3C */
+ 
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#69bae6', endColorstr='#328dcf', GradientType=0) !important;
+  /* IE6-8 */
+ 
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+  border-width: 0 1px 0 0 !important;
+  color: #fff !important;
+  text-shadow: 0 1px 0 #000000 !important;
+}
+div.yee .plugin-modal .tabs-left > .nav-tabs > li.no-select > a:hover,
+div.yee .plugin-modal .tabs-left > .nav-tabs > li.no-select > a:active,
+div.yee .plugin-modal .tabs-left > .nav-tabs > li.no-select > a:focus,
+div.yee .plugin-modal .tabs-left > .nav-tabs > li.no-select > a {
+  color: #6f7e8b !important;
+  text-shadow: 0 1px 0 #ffffff !important;
+  background: none !important;
+  border-color: transparent #b4b4b4 transparent transparent !important;
+}
+div.yee .plugin-modal .tabs-left {
+  background-color: #e0e3e9;
+}
+div.yee .plugin-modal .tabs-left > .nav-tabs > li > a [class^="icon-"],
+div.yee .plugin-modal .tabs-left > .nav-tabs > li > a [class*=" icon-"] {
+  margin: -1px 2px 0 0;
+}
+div.yee .plugin-modal .tabs-left > .nav-tabs > li.active > a [class^="icon-"],
+div.yee .plugin-modal .tabs-left > .nav-tabs > li.active > a [class^="icon-"],
+div.yee .plugin-modal .tabs-left > .nav-tabs > li.active > a [class^="icon-"],
+div.yee .plugin-modal .tabs-left > .nav-tabs > li.active > a [class*=" icon-"],
+div.yee .plugin-modal .tabs-left > .nav-tabs > li.active > a [class*=" icon-"],
+div.yee .plugin-modal .tabs-left > .nav-tabs > li.active > a [class*=" icon-"] {
+  background-image: url("../img/glyphicons-halflings-white.png");
+  margin: -1px 2px 0 0;
+}
+div.yee .tabs-left > .nav-tabs > li > a:hover,
+div.yee .tabs-left > .nav-tabs > li > a:focus {
+  background-color: #d4d4d4;
+  border-color: transparent #b4b4b4 transparent transparent;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+div.yee .plugin-modal .btn-block {
+  height: 80px;
+  line-height: 12px;
+}
+div.yee .plugin-modal .row-fluid {
+  margin: 20px 0;
+}
+div.yee .plugin-modal .tab-content {
+  padding-right: 20px;
+  border-left: 1px solid #b4b4b4;
+  padding-left: 20px;
+  min-height: 300px;
+  background-color: #ffffff;
+  overflow:hidden;
+}
+div.yee .plugin-modal .btn-block [class^="icon-"],
+div.yee .plugin-modal .btn-block [class*=" icon-"] {
+  display: block;
+  margin: 8px auto 16px;
+}
+div.yee .yee_widget {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #FFF;
+  border: 0px dashed #AAAAAA;
+  margin-right: -1px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+}
+div.yee .yee_widget .yee_header span.title {
+  color: #000000;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  top: 18px;
+}
+div.yee .yee_widget .yee_header {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  height: 28px;
+  margin-bottom: 0;
+  padding: 0 10px 0;
+  line-height: 20px;
+  color: #333;
+  text-align: left;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: default;
+  background: none;
+  border: 0px dotted #aaa;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+div.yee .widget_content [class*="span"] {
+  padding: 0;
+  font-size: 12px;
+}
+div.yee .yee_group_6 [class*="span"] {
+  padding: 20px 10px 0;
+  font-size: 12px;
+}
+div.yee .yee_group_6 .widget_content [class*="span"] {
+  padding: 0;
+}
+div.yee .yee_col_header {
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+div.yee .yee_box_col {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 1px dotted #aaa;
+  -webkit-box-shadow: inset 0 0px 5px rgba(0, 0, 0, 0.25) !important;
+  -moz-box-shadow: inset 0 0px 5px rgba(0, 0, 0, 0.25) !important;
+  box-shadow: inset 0 0px 5px rgba(0, 0, 0, 0.25) !important;
+  background: #ddd;
+}
+div.yee .yee_col_header {
+  text-align: left;
+}
+div.yee .yee_float_assign {
+  float: inherit;
+}
+div.yee .yee_ToogleButton {
+  margin-bottom: 30px;
+}
+div.yee .dropdown-menu li.remove {
+  position: relative;
+}
+div.yee .dropdown-menu .pull-right-icon {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+}
+div.yee .yee_alert-info_icon {
+  background: url("../img/info.png") no-repeat scroll left center transparent;
+  padding: 7px 24px;
+}
+div.yee .yee_alert_icon {
+  background: url("../img/alert.png") no-repeat scroll left center transparent;
+  padding: 7px 24px;
+}
+div.yee .yee_alert-success_icon {
+  background: url("../img/tick.png") no-repeat scroll left center transparent;
+  padding: 7px 24px;
+}
+div.yee .yee_alert-error_icon {
+  background: url("../img/exclamation.png") no-repeat scroll left center transparent;
+  padding: 7px 24px;
+}
+div.yee .container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+div.yee li {
+  padding: 0;
+}
+div.btnOptionPanel{
+  background: url('../img/btn-hide-options-panel.gif') no-repeat 0 0 transparent;
+  width: 15px;
+  height: 126px;
+  position: absolute;
+  top: 264px;
+  right: 2px;
+  cursor: pointer;
+}
+div.btnOptionPanel.show{
+  background: url('../img/btn-show-options-panel.gif') no-repeat 0 0 transparent;
+}
+.widget_content{
+	overflow: hidden;
+}
+div.yee .plugin-modal .yee_widget_setting_body{
+	padding:10px;
+}
+div.yee .yee_add_tab{
+  cursor: pointer;
+}
+div#yee.yee .images_holder li{
+  width: 80px;
+  height: 80px;
+  border: 1px solid #ccc;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  position: relative;
+  list-style:none ;
+}
+div.yee .images_holder li a.icon-remove{
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  cursor: pointer;
+}
+div.yee .images_holder li a.icon-edit{
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  cursor: pointer;
+}
+div.yee .images_holder li.add_new_image i{
+  position: relative;
+  top: 31px;
+  left: 31px;
+}
+div.yee .images_holder li.add_new_image{
+  cursor: pointer;
+}
+div.yee .carousel_edit_info{
+  display: none;
+}
+div.yee .images_holder li.highlight{
+  border: 1px solid #006DCC;
+}
+div.yee .element_item{text-align: center;}
+div.yee .element_item a{display: inline-block;}
+div.yee .element_item a img{ margin:0; width: 142px;}
+div.yee .element_item span{ 
+	display: block;
+	margin: 5px 0;
+}
+div.yee .plugin-modal .row-fluid.show-grid{
+	margin: 10px 0;
+}
+div.yee .widget{ margin-bottom:10px}
+
+div.yee #yee_add_row .icon-plus {display: inline-block !important; content:normal !important;}
+
+div.yee a#yee_add_row [class^="icon-"], 
+div.yee a#yee_add_row [class*=" icon-"], 
+div.yee a#yee_add_row [class^="icon-"]:before, 
+div.yee a#yee_add_row [class*=" icon-"]:before,
+div.yee a#yee_add_element [class^="icon-"], 
+div.yee a#yee_add_element [class*=" icon-"], 
+div.yee a#yee_add_element [class^="icon-"]:before, 
+div.yee a#yee_add_element [class*=" icon-"]:before,
+div.yee a#yee_add_template [class^="icon-"], 
+div.yee a#yee_add_template [class*=" icon-"], 
+div.yee a#yee_add_template [class^="icon-"]:before, 
+div.yee a#yee_add_template [class*=" icon-"]:before,
+div.yee a#yee_add_col [class^="icon-"], 
+div.yee a#yee_add_col [class*=" icon-"], 
+div.yee a#yee_add_col [class^="icon-"]:before, 
+div.yee a#yee_add_col [class*=" icon-"]:before,
+div.yee .yee_header.yee_col_header [class^="icon-"], 
+div.yee .yee_header.yee_col_header [class*=" icon-"], 
+div.yee .yee_header.yee_col_header [class^="icon-"]:before, 
+div.yee .yee_header.yee_col_header [class*=" icon-"]:before,
+
+div.yee .yee_header .yee_inner_header.btn-toolbar [class^="icon-"], 
+div.yee .yee_header .yee_inner_header.btn-toolbar [class*=" icon-"], 
+div.yee .yee_header .yee_inner_header.btn-toolbar [class^="icon-"]:before, 
+div.yee .yee_header .yee_inner_header.btn-toolbar [class*=" icon-"]:before,
+
+div.yee .yee_header .yee_settings [class^="icon-"], 
+div.yee .yee_header .yee_settings [class*=" icon-"], 
+div.yee .yee_header .yee_settings [class^="icon-"]:before, 
+div.yee .yee_header .yee_settings [class*=" icon-"]:before,
+
+/*div.yee#yee .modal-body .tabbable.tabs-left [class^="icon-"], 
+div.yee#yee .modal-body .tabbable.tabs-left [class*=" icon-"], 
+div.yee#yee .modal-body .tabbable.tabs-left [class^="icon-"]:before, 
+div.yee#yee .modal-body .tabbable.tabs-left [class*=" icon-"]:before,*/
+
+
+div.yee#yee .yee_column .yee_float_assign [class^="icon-"], 
+div.yee#yee .yee_column .yee_float_assign [class*=" icon-"], 
+div.yee#yee .yee_column .yee_float_assign [class^="icon-"]:before, 
+div.yee#yee .yee_column .yee_float_assign [class*=" icon-"]:before
+{display: inline-block !important; content:none !important;}
+
+div.yee .yee_header.yee_col_header a:hover, 
+div.yee .yee_header.yee_col_header a:active, 
+div.yee .yee_header.yee_col_header a:focus,
+div.yee .yee_header .yee_settings a:hover, 
+div.yee .yee_header .yee_settings a:active, 
+div.yee .yee_header .yee_settings a:focus {background:none !important;}
+
+
+div.yee .yee_header .yee_inner_header.btn-toolbar ul.dropdown-menu.template_action,
+div.yee .yee_header .yee_inner_header.btn-toolbar ul.dropdown-menu.yee_columnTypes{padding:5px 0 !important; list-style-type: none !important;}
+div.yee .dropdown-menu .divider {margin:9px 1px !important;}
+
+div.yee#yee .modal-body .tabbable.tabs-left ul.nav.nav-tabs {margin:0 !important; padding:0 !important;list-style-type: none !important;}
+div.yee#yee .modal-body .tabbable.tabs-left a:hover,
+div.yee#yee .modal-body .tabbable.tabs-left a:active,
+div.yee#yee .modal-body .tabbable.tabs-left a:focus {background:#d4d4d4 !important;}
+
+div.yee#yee .modal-body .tabbable.tabs-left .nav.nav-tabs .active a:hover,
+div.yee#yee .modal-body .tabbable.tabs-left .nav.nav-tabs .active a:active,
+div.yee#yee .modal-body .tabbable.tabs-left .nav.nav-tabs .active a:focus {
+	  border-color: transparent #b4b4b4 transparent transparent !important;
+  background: #69bae6 !important;
+  /* Old browsers */
+ 
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+ 
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzY5YmFlNiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMzMjhkY2YiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #69bae6 0%, #328dcf 100%) !important;
+  /* FF3.6+ */
+ 
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #69bae6), color-stop(100%, #328dcf)) !important;
+  /* Chrome,Safari4+ */
+ 
+  background: -webkit-linear-gradient(top, #69bae6 0%, #328dcf 100%) !important;
+  /* Chrome10+,Safari5.1+ */
+ 
+  background: -o-linear-gradient(top, #69bae6 0%, #328dcf 100%) !important;
+  /* Opera 11.10+ */
+ 
+  background: -ms-linear-gradient(top, #69bae6 0%, #328dcf 100%) !important;
+  /* IE10+ */
+ 
+  background: linear-gradient(to bottom, #69bae6 0%, #328dcf 100%) !important;
+  /* W3C */
+ 
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#69bae6', endColorstr='#328dcf', GradientType=0) !important;
+  /* IE6-8 */
+ 
+  color: #fff !important;
+  text-shadow: 0 1px 0 #000000 !important;
+
+}
+
+div.yee#yee .plugin-modal a:hover, 
+div.yee#yee .plugin-modal a:active, 
+div.yee#yee .plugin-modal a:focus {color:inherit !important; background: inherit !important;}
+
+div.yee #widgetModal .modal-header h2 {
+	color: inherit !important;
+    font-family: inherit !important;
+    font-size: 18px !important;
+    line-height: 30px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+	font-weight:bold !important;
+}
+div.yee #widgetModal .yee_widget_setting_body strong { font-size:12px !important; }
+
+div.yee .dropdown-menu > li > a:hover,
+div.yee .dropdown-menu > li > a:focus,
+div.yee .dropdown-submenu:hover > a,
+div.yee .dropdown-submenu:focus > a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  background-color: #0081c2 !important;
+  background-image: -moz-linear-gradient(top, #0088cc, #0077b3) !important;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0077b3)) !important;
+  background-image: -webkit-linear-gradient(top, #0088cc, #0077b3) !important;
+  background-image: -o-linear-gradient(top, #0088cc, #0077b3) !important;
+  background-image: linear-gradient(to bottom, #0088cc, #0077b3) !important;
+  background-repeat: repeat-x !important;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0077b3', GradientType=0) !important;
+}
+
+div.yee [class^="icon-"]:before, div.yee [class*=" icon-"]:before {
+    font-family: 'FontAwesome' !important;
+}
+div.yee .modal.fade.in {
+    top: 10%;
+}
+div.yee [class^="icon-"], div.yee [class*=" icon-"] {
+    background-image: none !important;
+}
+div.yee .yee_header .icon-clone,
+div.yee .yee_inner_header .icon-briefcase, 
+div.yee .yee_inner_header .icon-th-large, 
+div.yee .yee_header .icon-edit, 
+div.yee .yee_header .icon-question-sign, 
+div.yee .yee_header .icon-remove-circle, 
+div.yee .yee_header .icon-plus,
+div.yee .yee_inner_header .icon-plus,
+div.yee .yee_add_row_ele_btn .icon-plus,
+div.yee .yee_add_ele_inner_btn .icon-plus,
+div.yee .yee_inner_column .icon-plus,
+div.yee .delete_template .icon-remove{
+    background-image:url("../img/glyphicons-halflings.png") !important;
+}
+
+div.yee .icon-ok:before,
+div.yee .icon-star:before,
+div.yee .icon-minus-sign:before,
+div.yee .icon-ban-circle:before,
+div.yee .icon-pencil:before,
+div.yee .icon-edit:before{
+  color: inherit;
+}
+
+div.yee .yeeAccordion_intro_text .widget_content{ padding-bottom:10px;}
+div.yee #yee_intro_text{width:98%;}
+
+/* start of modification for 5 columns */
+   @media (min-width: 768px){
+		div.yee .row-fluid .span2_4 {
+		    width: 18.297872340425532%;
+		    *width: 18.2234042553191494%;
+		}
+	}
+	@media (min-width: 1200px) {
+		div.yee .row-fluid .span2_4 {
+			width: 17.9487179487179488%;
+			*width: 17.87424986361156592%;
+	    }
+	}
+	@media (min-width: 768px) and (max-width: 979px) {
+		div.yee .row-fluid .span2_4 {
+			width: 17.79005524861878448%;
+			*width: 17.7155871635124022%;
+		}
+	}
+/* end of modification for 5 columns */

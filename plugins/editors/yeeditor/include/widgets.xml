@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="gb2312"?>
+<prowidgets>
+	<widget>wgt_accordion|yee-icon-accordion.jpg</widget>
+	<widget>wgt_button|yee-icon-button.jpg</widget>
+	<widget>wgt_carousel|yee-icon-carousel.jpg</widget>
+	<widget>wgt_dateCountdown|wgt_dateCountdown.jpg</widget>
+	<widget>wgt_elevatezoom|yee-icon-elevate-zoom.jpg</widget>
+	<widget>wgt_faq|yee-icon-faq.jpg</widget>
+	<widget>wgt_flexslider|yee-icon-flex-slider.jpg</widget>
+	<widget>wgt_google_map|yee-icon-google-maps.jpg</widget>
+	<widget>wgt_historic|yee-icon-history.jpg</widget>
+	<widget>wgt_hover_effect|yee-icon-hover-effect.jpg</widget>
+	<widget>wgt_iframe|yee-icon-iframe.jpg</widget>
+	<widget>wgt_jce_editor|wgt-icon-jce-editor.jpg</widget>
+	<widget>wgt_jck_editor|wgt-icon-jck-editor.jpg</widget>
+	<widget>wgt_joomla_module|yee-icon-joomla-module.jpg</widget>
+	<widget>wgt_jPlayer|yee-icon-jplayer.jpg</widget>
+	<widget>wgt_message_box|yee-icon-message.jpg</widget>
+	<widget>wgt_nivo_slider|yee-icon-nivo-slider.jpg</widget>
+	<widget>wgt_photo_gallery|yee-icon-photo-gallery.jpg</widget>
+	<widget>wgt_progressbar|wgt-progressbar.jpg</widget>
+	<widget>wgt_single_image|yee-icon-single-image.jpg</widget>
+	<widget>wgt_tabs|yee-icon-tabs.jpg</widget>
+	<widget>wgt_teaser_grid|yee-icon-teaser-grid.png</widget>
+	<widget>wgt_tinymce_editor|wgt-icon-tinymce-editor.jpg</widget>
+	<widget>wgt_title|yee-icon-title.jpg</widget>
+	<widget>wgt_twentytwenty|yee-icon-twenty-twenty.jpg</widget>
+	<widget>wgt_VerticalTimeline|yee-icon-vertical-timeline.jpg</widget>
+</prowidgets>
+

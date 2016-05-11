@@ -1,0 +1,987 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="generator" content="HTML Tidy for Mac OS X (vers 31 October 2006 - Apple Inc. build 15.6), see www.w3.org" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <title>Branch-O-Mania</title>
+  <style type="text/css">
+/*<![CDATA[*/
+  body {
+       margin-left: 0px;
+       margin-top: 0px;
+       margin-right: 0px;
+       margin-bottom: 0px;
+       overflow:hidden;
+       -webkit-user-select: none;
+       -khtml-user-select: none;
+       -moz-user-select: none;
+       -o-user-select: none;
+       user-select: none;
+  }
+  /*]]>*/
+  </style>
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" type="text/css" />
+  <script src="http://code.jquery.com/jquery.min.js" type="text/javascript">
+</script>
+  <script src="code/jquery.pause.min.js" type="text/javascript">
+</script>
+  <script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js" type="text/javascript">
+</script>
+  <script src="code/jquery.imgpreload.min.js" type="text/javascript">
+</script>
+<script src="code/jquery.nicescroll.min.js"></script>
+  <script type="text/javascript">
+//<![CDATA[
+       function BlockMove(event) {
+               event.preventDefault() ;
+        }
+  $(document).ready(function () {
+       
+       jQuery.fx.interval = 26;
+       
+       var thePick = 3
+       
+       $("#scoreText").text(0)
+       $("#scoreText1").text(0)
+       $("#scoreText2").text(0)
+       
+       var theScore = 0
+       
+       var labelArray = new Array()
+       labelArray[1] = new Array('','Enforces Laws','Commands Military','President','White House','Established by Article II','Vetos<br />Bills','Creates Budget','Cabinet','4 Year Term','Makes Foreign Policy')
+       labelArray[2] = new Array('','Interprets Laws','Consists of 9 Justices','Supreme Court','Established by Article III','Settles State Disputes','Decides <div style="font-size: 9px;">Constitutionality<\/div>','Settles Legal Disputes','Justice by Juries','Appointed for Life','Punishes <div style="font-size: 9px;">Lawbreakers</div>')
+       labelArray[3] = new Array('','Creates Laws','Declares War','U.S. Capitol','Consists of 2 Houses','Ratifies Treaties','Established by Article I','Approves Budget','Overrides <div style="font-size: 9px;">Presidential<\/div> Vetos','Terms of 2-6 Years','Can Impeach President')
+       
+       $.fn.hitTestObject = function(obj){
+
+               var bounds = this.offset();
+                       bounds.right = bounds.left + this.outerWidth();
+               bounds.bottom = bounds.top + this.outerHeight();
+
+       var compare = obj.offset();
+               compare.right = compare.left + obj.outerWidth();
+               compare.bottom = compare.top + obj.outerHeight();
+
+       return (!(compare.right < bounds.left ||
+               compare.left > bounds.right ||
+               compare.bottom < bounds.top ||
+               compare.top > bounds.bottom));
+
+       }
+       
+       $("#game").css('visibility','hidden')
+       $("#lScreen").css('visibility','hidden')
+       
+       jQuery.imgpreload(['loader_start.gif'],
+       {
+               each: function()
+               {
+               },
+               all: function()
+               {
+                       $("#lScreen").css('visibility','visible')
+                       loadAllImages()
+               }
+       });
+       
+       var expandNum = 0
+       
+       function loadAllImages() {
+       jQuery.imgpreload(['bDisp6.png','bDisp5.png','bDisp4.png','bDisp3.png','bDisp2.png','bDisp1.png','clock_icon.png','heart_icon.png','mystery_icon.png','word_bubble.png','e10.png','e9.png','e8.png','e7.png','e6.png','e5.png','e4.png','e3.png','e2.png','e1.png','j10.png','j9.png','j8.png','j7.png','j6.png','j5.png','j4.png','j3.png','j2.png','j1.png','l10.png','l9.png','l8.png','l7.png','l6.png','l5.png','l4.png','l3.png','l2.png','l1.png','learn_more_legislative.png','learn_more_executive.png','learn_more_judicial.png','end_bensguide.png','end_playagain.png','end_learnmore.png','end_tryagain.png','end_goodjob.png','i_button.png','judicial_button.png','judicial_button_glow.png','executive_button.png','executive_button_glow.png','legislative_button.png','legislative_button_glow.png','intro_background.gif','1_countdown.png','2_countdown.png','3_countdown.png','go_countdown.png','legislative_banner.png','judicial_banner.png','executive_banner.png','ben_happy.png','ben_sad.png','ben_right_red.png','ben_left_red.png','red_pill.png','ben_right.png','ben_left.png','ben_center.png','ben_right_green.png','ben_left_green.png','legislative_background.jpg','judicial_background.jpg','executive_back.jpg','group1_icon1.png','group1_icon2.png','group1_icon3.png','group1_icon4.png','group1_icon5.png','group1_icon6.png','group1_icon7.png','group1_icon8.png','group1_icon9.png','group1_icon10.png','group2_icon1.png','group2_icon2.png','group2_icon3.png','group2_icon4.png','group2_icon5.png','group2_icon6.png','group2_icon7.png','group2_icon8.png','group2_icon9.png','group2_icon10.png','group3_icon1.png','group3_icon2.png','group3_icon3.png','group3_icon4.png','group3_icon5.png','group3_icon6.png','group3_icon7.png','group3_icon8.png','group3_icon9.png','group3_icon10.png','group1_icon1_grey.png','group1_icon2_grey.png','group1_icon3_grey.png','group1_icon4_grey.png','group1_icon5_grey.png','group1_icon6_grey.png','group1_icon7_grey.png','group1_icon8_grey.png','group1_icon9_grey.png','group1_icon10_grey.png','group2_icon1_grey.png','group2_icon2_grey.png','group2_icon3_grey.png','group2_icon4_grey.png','group2_icon5_grey.png','group2_icon6_grey.png','group2_icon7_grey.png','group2_icon8_grey.png','group2_icon9_grey.png','group2_icon10_grey.png','group3_icon1_grey.png','group3_icon2_grey.png','group3_icon3_grey.png','group3_icon4_grey.png','group3_icon5_grey.png','group3_icon6_grey.png','group3_icon7_grey.png','group3_icon8_grey.png','group3_icon9_grey.png','group3_icon10_grey.png','help_popup.png','i_button2.png','bonus500.png','bonus_bubble.png'],
+       {
+               each: function()
+               {
+                       expandNum++
+                       var expandWidth = Math.floor(286*(expandNum/137))
+                       if (expandWidth>286) {
+                               expandWidth = 286
+                       }
+                       $("#lBar").css('width',expandWidth)
+               },
+               all: function()
+               {
+                       setTimeout(initialStart,1000);
+               }
+       });
+       }
+       
+       $("#iButton2").click(function(e) {
+        $("#extraHolder").append('<div id="helpMovie" style="position: absolute; top: 0px; left: 0px; height: 600px; width: 800px; z-index: 2500"><img src="help_popup.png" width="800" height="600" /><div id="helpClose" style="position: absolute; top: 28px; left: 741px; width: 30px; height: 30px; background-color:#F00; z-index: 2550; cursor: pointer"></div><div id="helpHolder" style="position:absolute; left:292px; top:56px; width: 438px; height: 487px; z-index: 500; padding-right: 30px; overflow:auto; font-family: Arial, Helvetica, sans-serif;"><font size="-1"><br />Using the information you&#39;ve gained from the Learning Adventures, help Ben Franklin catch the icons that are unique to each branch of government.<br /><br />Begin by selecting the branch of government that you&#39;d like to play and Ben will travel to the building that represents that branch of government.  When the game starts, icons from all branches of government will begin to fall from the sky.  Your job is to help Ben catch the icons that belong to that branch of government.  Catch a correct icon and Ben&#39;s basket will glow green and you&#39;ll be rewarded with a health bonus.  But catch the wrong icon, and Ben&#39;s basket will glow red and he&#39;ll lose some health.<br /><br />For every 10 icons you collect, you&#39;ll level up.  But be careful!  Ben will need to move quick as the icons will fall faster at higher levels.  You&#39;ll also encounter Mystery Icons, which can have a positive or negative effect on both your health and time.<br />   <br />   <div align="center"><img src="ben_help.png" width="252" height="160" /></div><br /><br /> <font size="+1"><b>Legislative Icons</b></font><br />   <img src="legislative_help.png" width="418" height="192" /> <br /> <br /> <br /><br /> <font size="+1"><b>Executive Icons</b></font><br />   <img src="executive_help.png" width="414" height="192" /> <br /> <br /> <br /><br /> <font size="+1"><b>Judicial Icons</b></font><br />   <img src="judicial_help.png" width="419" height="187" /> <br /> <br /> <br /><br /> <font size="+1"><b>Mystery Icon</b></font><br /> <img src="mystery_icon.png" width="69" height="69" /> <br /> <br /> <br /> <font size="+1"><b>Scoring</b></font><br /> • 1st correct catch = +50 points, +5% health<br /> • Correct catch = +25 points, +1% health<br /> • Incorrect catch = -5 points, -10% health<br /> • Drop = -5 % health<br /> • Health Mystery Icon = -20%, -10%, +10%, +20%, +30%, or +50% health <br /> <br /> <br /> <font size="+1"><b>Bonus Mode</b></font><br /> When the user catches all 10 icons, the game goes into a "Bonus" mode, during which time the points are doubled for every correct icon that Ben catches. <br /> <br /> <br /> <font size="+1"><b>Game Over</b></font><br /> The game ends when Ben loses all of his health.  When you&#39;ve finished a game, you can click the "Learn More" button to find out which icons go with which branch of government.  Click the "Play Again" button to choose another branch of government and try to beat your previous score. <br /> <br /> <br /></font></div></div>')
+               if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/Android/i))) {
+			   $("#helpHolder").niceScroll({cursorborder:"",cursorcolor:"#00F",boxzoom:false});
+			   }
+			   $("#helpClose").css('opacity',0)
+               $("#iconHolder").children().pause()
+               isPaused = true
+               $("#helpClose").click(function(e) {
+            $("#helpMovie").remove()
+                       $("#iconHolder").children().resume()
+                       isPaused = false
+        });
+    });
+       
+       function initialStart() {
+               $("#lScreen").remove()
+               $("#theBasket").css('opacity',0)
+               $("#game").css('visibility','visible')
+               for (var i=1;i<=10;i++) {
+                       $("#tile"+i).append('<img id="dispTile'+i+'" src="group2_icon8.png" style="position: absolute; top:4px; left:3px; z-index: 200; visibility: hidden; width: 62px; height:62px">')
+               }
+               // gameStarter()
+               selectScreenFunc()
+       }
+       
+       function selectScreenFunc() {
+               $("#extraHolder").css('visibility','visible')
+               $("#extraHolder").append('<div id="selectScreen" style="position: absolute; top: 0px; left: 0px; width: 800px; height: 600px; z-index: 50"><img id="selectBack" src="intro_background.gif" width="800" height="600" style="position: absolute; top: 0px; left: 0px; z-index: 500" /><img id="selectButton1" src="legislative_button.png" width="283" height="177" style="position: absolute; top: 33px; left: 482px; z-index: 600; cursor: pointer"  /><img id="selectButton2" src="executive_button.png" width="283" height="177" style="position: absolute; top: 214px; left: 482px; z-index: 700; cursor: pointer"  /><img id="selectButton3" src="judicial_button.png" width="283" height="177" style="position: absolute; top: 396px; left: 482px; z-index: 800; cursor: pointer"  /><img id="iButton" src="i_button.png" width="72" height="65" style="position: absolute; top: 252px; left: 351px; z-index: 900"  /><\/div>')
+               $("#iButton").click(function(e) {
+        $("#extraHolder").append('<div id="helpMovie" style="position: absolute; top: 0px; left: 0px; height: 600px; width: 800px; z-index: 2500"><img src="help_popup.png" width="800" height="600" /><div id="helpClose" style="position: absolute; top: 28px; left: 741px; width: 30px; height: 30px; background-color:#F00; z-index: 2550; cursor: pointer"></div><div id="helpHolder" style="position:absolute; left:292px; top:56px; width: 438px; height: 487px; z-index: 500; padding-right: 30px; overflow:auto; font-family: Arial, Helvetica, sans-serif;"><font size="-1"><br />Using the information you&#39;ve gained from the Learning Adventures, help Ben Franklin catch the icons that are unique to each branch of government.<br /><br />Begin by selecting the branch of government that you&#39;d like to play and Ben will travel to the building that represents that branch of government.  When the game starts, icons from all branches of government will begin to fall from the sky.  Your job is to help Ben catch the icons that belong to that branch of government.  Catch a correct icon and Ben&#39;s basket will glow green and you&#39;ll be rewarded with a health bonus.  But catch the wrong icon, and Ben&#39;s basket will glow red and he&#39;ll lose some health.<br /><br />For every 10 icons you collect, you&#39;ll level up.  But be careful!  Ben will need to move quick as the icons will fall faster at higher levels.  You&#39;ll also encounter Mystery Icons, which can have a positive or negative effect on both your health and time.<br />   <br />   <div align="center"><img src="ben_help.png" width="252" height="160" /></div><br /><br /> <font size="+1"><b>Legislative Icons</b></font><br />   <img src="legislative_help.png" width="418" height="192" /> <br /> <br /> <br /><br /> <font size="+1"><b>Executive Icons</b></font><br />   <img src="executive_help.png" width="414" height="192" /> <br /> <br /> <br /><br /> <font size="+1"><b>Judicial Icons</b></font><br />   <img src="judicial_help.png" width="419" height="187" /> <br /> <br /> <br /><br /> <font size="+1"><b>Mystery Icon</b></font><br /> <img src="mystery_icon.png" width="69" height="69" /> <br /> <br /> <br /> <font size="+1"><b>Scoring</b></font><br /> • 1st correct catch = +50 points, +5% health<br /> • Correct catch = +25 points, +1% health<br /> • Incorrect catch = -5 points, -10% health<br /> • Drop = -5 % health<br /> • Health Mystery Icon = -20%, -10%, +10%, +20%, +30%, or +50% health <br /> <br /> <br /> <font size="+1"><b>Bonus Mode</b></font><br /> When the user catches all 10 icons, the game goes into a "Bonus" mode, during which time the points are doubled for every correct icon that Ben catches. <br /> <br /> <br /> <font size="+1"><b>Game Over</b></font><br /> The game ends when Ben loses all of his health.  When you&#39;ve finished a game, you can click the "Learn More" button to find out which icons go with which branch of government.  Click the "Play Again" button to choose another branch of government and try to beat your previous score. <br /> <br /> <br /></font></div></div>')
+               if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/Android/i))) {
+			   $("#helpHolder").niceScroll({cursorborder:"",cursorcolor:"#00F",boxzoom:false});
+			   }
+               $("#helpClose").css('opacity',0)
+               $("#iconHolder").children().pause()
+               isPaused = true
+               $("#helpClose").click(function(e) {
+            $("#helpMovie").remove()
+                       $("#iconHolder").children().resume()
+                       isPaused = false
+        });
+    });
+               $("#selectButton1").mouseenter(function(e) {
+               $("#selectButton1").attr('src','legislative_button_glow.png')
+       });
+               $("#selectButton1").mouseleave(function(e) {
+               $("#selectButton1").attr('src','legislative_button.png')
+       });
+               $("#selectButton2").mouseenter(function(e) {
+               $("#selectButton2").attr('src','executive_button_glow.png')
+       });
+               $("#selectButton2").mouseleave(function(e) {
+               $("#selectButton2").attr('src','executive_button.png')
+       });
+               $("#selectButton3").mouseenter(function(e) {
+               $("#selectButton3").attr('src','judicial_button_glow.png')
+       });
+               $("#selectButton3").mouseleave(function(e) {
+               $("#selectButton3").attr('src','judicial_button.png')
+       });
+               $("#selectButton1").click(function(e) {
+            thePick = 3
+                       gameStarter()
+                       $("#selectScreen").remove()
+                       // $("#extraHolder").css('visibility','hidden')
+        });
+               $("#selectButton2").click(function(e) {
+            thePick = 1
+                       gameStarter()
+                       $("#selectScreen").remove()
+                       // $("#extraHolder").css('visibility','hidden')
+        });
+               $("#selectButton3").click(function(e) {
+            thePick = 2
+                       gameStarter()
+                       $("#selectScreen").remove()
+                       // $("#extraHolder").css('visibility','hidden')
+        });
+       }
+       
+       function gameStarter() {
+		   		clockDelay = 10000
+		   		bonusCount=0
+               levelCount = 0
+               levelTotal = 250
+               thirtyCount = 0
+               posDropNum = 0
+               dropSpeed = 3500
+               theScore = 0
+               $("#scoreText").text(0)
+               $("#scoreText1").text(0)
+               $("#scoreText2").text(0)
+               totalDropped = 0
+               totalCaught = 0
+               currentBen = "center"
+               mousePos = 293
+               dropCount=15
+               dropNameCount=0
+               basketState = ''
+               basketCount = 0
+               prevPos = 0
+               prevGuy = ""
+               isPaused = false
+               orderArray = new Array()
+               allowCount = 3
+               tCount = 0
+               overallTime = 0
+               odds = 2
+               dropTotal = 40
+               countdownNum = 4
+               mysteryTime = Math.floor((Math.random()*120)+100)
+               mysteryDone = false
+               //
+               $("#ben").css({'left':293, 'opacity':0})
+               $("#ben").attr('src','ben_center.png')
+               $("#theBasket").css('left',363)
+               var count=0
+               orderArray = new Array()
+               while (count<10) {
+                       var theRand = Math.floor(Math.random()*10)+1
+                       if (orderArray[theRand]==undefined) {
+                               count++
+                               orderArray[theRand] = count
+                       }
+               }
+               // alert(orderArray.toString())
+               $("#theMeter").data('myNum',50)
+               $("#theMeter").css('left',124)
+               if (thePick==1) {
+                       $("#theBackground").attr('src','executive_back.jpg')
+                       $('#extraHolder').append('<div id="theBanner" style="position:absolute; top: 0px; left: 0px; width: 800px; height: 600px; z-index: 1000"><img src="executive_banner.png" width="800" height="600" style="position: absolute; top:0px; left:0px; z-index:500" /><img id="theNumDisp" src="3_countdown.png" width="800" height="600" style="position: absolute; top: 0px; left: 0px; z-index: 600" /><\/div>')
+               } else if (thePick==2) {
+                       $("#theBackground").attr('src','judicial_background.jpg')
+                       $('#extraHolder').append('<div id="theBanner" style="position:absolute; top: 0px; left: 0px; width: 800px; height: 600px; z-index: 1000"><img src="judicial_banner.png" width="800" height="600" style="position: absolute; top:0px; left:0px; z-index:500" /><img id="theNumDisp" src="3_countdown.png" width="800" height="600" style="position: absolute; top: 0px; left: 0px; z-index: 600" /><\/div>')
+               } else if (thePick==3) {
+                       $("#theBackground").attr('src','legislative_background.jpg')
+                       $('#extraHolder').append('<div id="theBanner" style="position:absolute; top: 0px; left: 0px; width: 800px; height: 600px; z-index: 1000"><img src="legislative_banner.png" width="800" height="600" style="position: absolute; top:0px; left:0px; z-index:500" /><img id="theNumDisp" src="3_countdown.png" width="800" height="600" style="position: absolute; top: 0px; left: 0px; z-index: 600" /><\/div>')
+               }
+               $("#scoreText").text(theScore)
+               $("#scoreText1").text(theScore)
+               $("#scoreText2").text(theScore)
+               for (var i=1;i<=10;i++) {
+                       $('#bonus'+i).data('myNum',0)
+                       $('#bonus'+i).css('visibility','hidden')
+                       $("#tileImage"+i).attr('src','silver_tile.png')
+                       $("#dispTile"+i).attr('src','group'+thePick+'_icon'+i+'_grey.png')
+                       $("#dispTile"+i).css('visibility','hidden')
+                       $("#tileText"+i).html(labelArray[thePick][i])
+               }
+               $("#extraHolder").css('visibility','visible')
+               setTimeout(getStartedFunc,1000);
+               // t = setTimeout(benMover,1000);
+       }
+       function getStartedFunc() {
+               if (countdownNum==1) {
+                       $("#ben").animate({
+                                opacity: 1
+                        }, 500, function() {
+                                // alert("!")
+                        });
+                        $("#theBanner").animate({
+                                opacity: 0
+                        }, 500, function() {
+                                $(this).remove()
+                                // $("#extraHolder").css('visibility','hidden')
+                                t = setTimeout(benMover,1000);
+                        });
+               } else {
+                       if (countdownNum==4) {
+                               $("#theNumDisp").attr('src','2_countdown.png')
+                       } else if (countdownNum==3) {
+                               $("#theNumDisp").attr('src','1_countdown.png')
+                       } else if (countdownNum==2) {
+                               $("#theNumDisp").attr('src','go_countdown.png')
+                       }
+                       setTimeout(getStartedFunc,1000);
+                       countdownNum--
+               }
+       }
+       
+       var thirtyCount = 0
+	   var bonusCount = 0
+       var dropSpeed
+       var posDropNum
+       var t
+       var currentBen = "center"
+       var mousePos = 293
+       var dropCount=0
+       var dropNameCount=0
+       var basketState = ''
+       var basketCount = 0
+       var prevPos = 0
+       var prevGuy = ""
+       var isPaused = false
+       var orderArray = new Array()
+       var allowCount = 3
+       var tCount = 0
+       var overallTime = 0
+       var odds = 3
+       var dropTotal = 40
+       var countdownNum = 4
+       var totalCaught = 0
+       var totalDropped = 0
+       var levelCount = 0
+       var levelTotal = 250
+       var mysteryTime
+       var mysteryDone
+	   var clockDelay = 10000
+       
+       $("#game").mousedown( function(event) {
+               event.preventDefault();
+       })
+       $("#ben").mousedown( function(event) {
+               event.preventDefault();
+       })
+       $("#tileHolder").mousedown( function(event) {
+               event.preventDefault();
+       })
+       $("#iconHolder").mousedown( function(event) {
+               event.preventDefault();
+       })
+       
+       if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/Android/i))) {
+               $("#game").bind('vmousemove', function(e){
+                       mousePos = e.clientX-103
+               })
+               $("#scoreText").css('font-size','27px')
+               $("#scoreText1").css('font-size','27px')
+               $("#scoreText2").css('font-size','27px')
+       } else {
+               $("#game").mousemove(function(e){
+                mousePos = e.clientX-103
+               });
+       }
+       
+       function scoreFunc(theNum) {
+               theScore = theScore+theNum
+               if (theScore<0) {
+                       theScore=0
+               }
+               $("#scoreText").text(theScore)
+               $("#scoreText1").text(theScore)
+               $("#scoreText2").text(theScore)
+			   if (theNum==500) {
+				   $("#extraHolder").append('<img id="bonusMessage" src="bonus500.png" width="201" height="23" style="position: absolute; top: 62px; left:310px; z-index:35" />')
+				   setTimeout(killBonusMessage,3000);
+			   }
+       }
+	   
+	   function killBonusMessage() {
+		   $("#bonusMessage").remove()
+	   }
+       
+       function addToBottom(tempPick,tempID,tempX,tempY) {
+               var theIconName = 'group'+tempPick+'_icon'+tempID+'.png'
+               // alert(theIconName)
+               // $("#theFrame").append("<div<img id='end20' src='group1_icon3.png' style='position: absolute; top: 0px; left: 0px; z-index: 8000' />")
+               $("#topHolder").append("<img id='end"+tempID+"' src='"+theIconName+"' style='position: absolute; top: "+tempY+"px; left: "+tempX+"px; z-index: 8000' />")
+               $('#end'+tempID).css('opacity',.5)
+               $('#end'+tempID).data('myNum',tempID)
+               $('#end'+tempID).animate({
+                               top: 485, left: 41+((tempID-1)*72)},{
+                               duration: 250, easing: 'linear',
+                               complete: function(){
+                                       var tempID = $(this).data('myNum')
+                                       $("#dispTile"+tempID).attr('src','group'+thePick+'_icon'+tempID+'.png')
+                                       $("#dispTile"+tempID).css('visibility','visible')
+                                       $("#tileImage"+tempID).attr('src','gold_tile.png')
+                                       var tNum = $("#bonus"+tempID).data('myNum')+1
+									   if (tNum==1) {
+										   bonusCount++
+										   if (bonusCount==10) {
+											   bonusCount = 11
+											   scoreFunc(500)
+										   }
+									   }
+                                       $("#bonus"+tempID).data('myNum',tNum)
+                                       $("#bonus"+tempID).text(tNum)
+                                       if (tNum>1) {
+                                               $('#bonus'+tempID).css('visibility','visible')
+                                       }
+                                       $(this).stop()
+                                       $(this).remove()
+                               }
+                       })
+       }
+	   
+	   function addToBar(theNum,tempX,tempY) {
+			   if (theNum==7) {
+				   clockDelay = 0
+				   var tPosX = tempX-75
+				   var tPosY = tempY-75
+				   $("#topHolder").append("<img id='endMystery' src='clock_icon.png' style='position: absolute; top: "+tempY+"px; left: "+tempX+"px; z-index: 8000' />")
+				   $('#endMystery').animate({
+                               width: 207, height: 207, opacity: .5, left: tPosX, top: tPosY},{
+                               duration: 250, easing: 'linear',
+                               complete: function(){
+							
+                                       $(this).stop()
+                                       $(this).remove()
+                               }
+                       })
+			   } else {
+               $("#topHolder").append("<img id='endMystery' src='heart_icon.png' style='position: absolute; top: "+tempY+"px; left: "+tempX+"px; z-index: 8000' />")
+               $('#endMystery').css('opacity',.5)
+               // $('#endMystery').data('myNum',tempID)
+               $('#endMystery').animate({
+                               top: 26, left: 366},{
+                               duration: 250, easing: 'linear',
+                               complete: function(){
+								   		if (theNum==1) {
+											barHandle(-20)
+											$("#bDisplay").attr('src','bDisp1.png')
+										} else if (theNum==2) {
+											barHandle(-10)
+											$("#bDisplay").attr('src','bDisp2.png')
+										} else if (theNum==3) {
+											barHandle(10)
+											$("#bDisplay").attr('src','bDisp3.png')
+										} else if (theNum==4) {
+											barHandle(20)
+											$("#bDisplay").attr('src','bDisp4.png')
+										} else if (theNum==5) {
+											barHandle(30)
+											$("#bDisplay").attr('src','bDisp5.png')
+										} else if (theNum==6) {
+											barHandle(50)
+											$("#bDisplay").attr('src','bDisp6.png')
+										}
+								   		// basketState = 'green'
+										basketCount = -5
+								   		$("#bDisplay").css('visibility','visible')
+                                       $(this).stop()
+                                       $(this).remove()
+                               }
+                       })
+			   }
+       }
+       
+       function barHandle(theNum) {
+               var tempBarNum = $("#theMeter").data('myNum')+theNum
+               if (tempBarNum<=0&&isPaused == false) {
+                       tempBarNum = 0
+                       // alert("end!")
+                       // $("#iconHolder").clearQueue();
+                       $("#iconHolder").children().stop()
+                       $("#iconHolder").children().remove()
+                       clearTimeout(t);
+                       $("#ben").attr('src','ben_sad.png')
+                       $("#ben").animate({
+                                left: 293
+                        }, 1000, function() {
+                               setTimeout(gameEndFunc,1000);
+                        });
+               }
+               if (tempBarNum>100) {
+                       tempBarNum = 100
+               }
+               $("#theMeter").data('myNum',tempBarNum)
+               var tempPosLeft = Math.floor(246*(tempBarNum/100))
+               $("#theMeter").css('left',tempPosLeft)
+       }
+       
+       function gameEndFunc() {
+               $("#extraHolder").append('<div id="endScreen" style="position: absolute; top: 0px; left: 0px; width: 800px; height: 600px; z-index: 500;"><img id="endMessage" src="end_tryagain.png" width="800" height="600" style="position: absolute; top: 0px; left: 0px; z-index: 25" /><div id="endScore" style="position:absolute; top:245px; left: 277px; width: 86px; height: 30px; text-align: left; font-size: 24px; color: #283891; z-index:30; -moz-user-select: none; -khtml-user-select: none; user-select: none; cursor:default">2500<\/div><div id="endCaught" style="position:absolute; top:245px; left: 558px; width: 86px; height: 30px; text-align: left; font-size: 24px; color: #283891; z-index:35; -moz-user-select: none; -khtml-user-select: none; user-select: none; cursor:default">2500<\/div><div id="endTime" style="position:absolute; top:280px; left: 252px; width: 86px; height: 30px; text-align: left; font-size: 24px; color: #283891; z-index:40; -moz-user-select: none; -khtml-user-select: none; user-select: none; cursor:default">2500<\/div><div id="endMissed" style="position:absolute; top:280px; left: 548px; width: 86px; height: 30px; text-align: left; font-size: 24px; color: #283891; z-index:45; -moz-user-select: none; -khtml-user-select: none; user-select: none; cursor:default">2500<\/div><img id="endLearnMore" src="end_learnmore.png" width="129" height="126" style="position:absolute; top:403px; left: 275px; z-index:100; cursor:pointer" /><img id="endPlayAgain" src="end_playagain.png" width="127" height="126" style="position:absolute; top:403px; left: 421px; z-index:200; cursor:pointer" /><img id="endBensGuide" src="end_bensguide.png" width="126" height="126" style="position:absolute; top:403px; left: 564px; z-index:300; cursor:pointer" /><\/div>')
+               var tempTotalSeconds = Math.floor(overallTime/20)
+               var tempMinutes = Math.floor(tempTotalSeconds/60)
+               var tempSeconds = tempTotalSeconds-(tempMinutes*60)
+               if (tempSeconds>9) {
+                       $("#endTime").text(tempMinutes+":"+tempSeconds)
+               } else {
+                       $("#endTime").text(tempMinutes+":0"+tempSeconds)
+               }
+               $("#endScore").text(theScore)
+               $("#endCaught").text(totalCaught)
+               $("#endMissed").text(totalDropped)
+               $("#endScreen").css('opacity',0)
+               $("#endScreen").animate({
+                       opacity: 1
+               }, 1000, function() {
+                       // setTimeout(gameEndFunc,1000);
+               });
+               $("#endPlayAgain").click(function(e) {
+            $("#endScreen").remove()
+                       selectScreenFunc()
+        });
+               $("#endLearnMore").click(function(e) {
+            $("#endScreen").remove()
+                       learnMoreScreenFunc()
+        });
+       }
+       
+       function learnMoreScreenFunc() {
+               $("#extraHolder").append('<div id="learnMore" style="position:absolute; top: 0px; left: 0px; width: 800px; height: 600px; z-index: 500"><img id="learnMore_image" src="j7.png" width="649" height="148" style="position:absolute; top:329px; left:76px; z-index:1300" /><img id="learnMoreBackground" src="learn_more_legislative.png" width="800" height="600" style="position:absolute; top:0px; left:0px; z-index: 5" /><div id="learnMoreButton1" style="position: absolute; top:506px; left: 195px; width: 88px; height: 86px; background-color:#FF0000; z-index: 1600; cursor: pointer"><\/div><div id="learnMoreButton2" style="position: absolute; top:506px; left: 303px; width: 88px; height: 86px; background-color:#FF0000; z-index: 1700; cursor: pointer"><\/div><div id="learnMoreButton3" style="position: absolute; top:506px; left: 412px; width: 88px; height: 86px; background-color:#FF0000; z-index: 1800; cursor: pointer"><\/div><div id="learnMoreButton4" style="position: absolute; top:506px; left: 519px; width: 88px; height: 86px; background-color:#FF0000; z-index: 1825; cursor: pointer"><\/div><div id="learnMore_tileHolder" style="position:absolute; top:197px; left:61px; height:130px; width:720px; z-index:750">   <div id="learnMore_tile1" style="position:absolute; top:0px; left: 0px; width: 68px; height: 130px;"><img id="learnMore_tileImage1" src="silver_tile.png" width="68" height="70" /><br />   <div id="learnMore_tileText1" style="position: absolute; top: 74px; text-align: center; font-size: 11px; color: #000; color: black; line-height:12px; width: 68px">2500<\/div><\/div>   <div id="learnMore_tile2" style="position:absolute; top:0px; left: 68px; width: 68px; height: 130px;"><img id="learnMore_tileImage2" src="silver_tile.png" width="68" height="70" /><br />   <div id="learnMore_tileText2" style="position: absolute; top: 74px; text-align: center; font-size: 11px; color: #000; color: black; line-height:12px; width: 68px">2500<\/div><\/div>   <div id="learnMore_tile3" style="position:absolute; top:0px; left: 136px; width: 68px; height: 130px;"><img id="learnMore_tileImage3" src="silver_tile.png" width="68" height="70" /><br />   <div id="learnMore_tileText3" style="position: absolute; top: 74px; text-align: center; font-size: 11px; color: #000; color: black; line-height:12px; width: 68px">2500<\/div><\/div>   <div id="learnMore_tile4" style="position:absolute; top:0px; left: 204px; width: 68px; height: 130px;"><img id="learnMore_tileImage4" src="silver_tile.png" width="68" height="70" /><br />   <div id="learnMore_tileText4" style="position: absolute; top: 74px; text-align: center; font-size: 11px; color: #000; color: black; line-height:12px; width: 68px">2500<\/div><\/div>   <div id="learnMore_tile5" style="position:absolute; top:0px; left: 272px; width: 68px; height: 130px;"><img id="learnMore_tileImage5" src="silver_tile.png" width="68" height="70" /><br />   <div id="learnMore_tileText5" style="position: absolute; top: 74px; text-align: center; font-size: 11px; color: #000; color: black; line-height:12px; width: 68px">2500<\/div><\/div>   <div id="learnMore_tile6" style="position:absolute; top:0px; left: 340px; width: 68px; height: 130px;"><img id="learnMore_tileImage6" src="silver_tile.png" width="68" height="70" /><br />   <div id="learnMore_tileText6" style="position: absolute; left: -8px; top: 74px; text-align: center; font-size: 11px; color: #000; color: black; line-height:12px; width: 84px">2500<\/div><\/div>   <div id="learnMore_tile7" style="position:absolute; top:0px; left: 408px; width: 68px; height: 130px;"><img id="learnMore_tileImage7" src="silver_tile.png" width="68" height="70" /><br />   <div id="learnMore_tileText7" style="position: absolute; top: 74px; text-align: center; font-size: 11px; color: #000; color: black; line-height:12px; width: 68px">2500<\/div><\/div>   <div id="learnMore_tile8" style="position:absolute; top:0px; left: 476px; width: 68px; height: 130px;"><img id="learnMore_tileImage8" src="silver_tile.png" width="68" height="70" /><br />   <div id="learnMore_tileText8" style="position: absolute; top: 74px; text-align: center; font-size: 11px; color: #000; color: black; line-height:12px; width: 68px">2500<\/div><\/div>   <div id="learnMore_tile9" style="position:absolute; top:0px; left: 544px; width: 68px; height: 130px;"><img id="learnMore_tileImage9" src="silver_tile.png" width="68" height="70" /><br />   <div id="learnMore_tileText9" style="position: absolute; top: 74px; text-align: center; font-size: 11px; color: #000; color: black; line-height:12px; width: 68px">2500<\/div><\/div>   <div id="learnMore_tile10" style="position:absolute; top:0px; left: 612px; width: 68px; height: 130px;"><img id="learnMore_tileImage10" src="silver_tile.png" width="68" height="70" /><br />   <div id="learnMore_tileText10" style="position: absolute; top: 74px; text-align: center; font-size: 11px; color: #000; color: black; line-height:12px; width: 68px">2500<\/div><\/div>   <\/div><\/div>')
+               $("#learnMoreButton1").css('opacity',0)
+               $("#learnMoreButton2").css('opacity',0)
+               $("#learnMoreButton3").css('opacity',0)
+               $("#learnMoreButton4").css('opacity',0)
+               if (thePick==1) {
+                       $('#learnMoreBackground').attr('src','learn_more_executive.png')
+               } else if (thePick==2) {
+                       $('#learnMoreBackground').attr('src','learn_more_judicial.png')
+               } else {
+                       $('#learnMoreBackground').attr('src','learn_more_legislative.png')
+               }
+               for (var i=1;i<=10;i++) {
+                       $("#learnMore_tile"+i).append('<img id="learnMore_dispTile'+i+'" src="group'+thePick+'_icon'+i+'.png" style="position: absolute; top:4px; left:3px; z-index: 200; width: 62px; height:62px">')
+                       $("#learnMore_tileText"+i).html(labelArray[thePick][i])
+                       $("#learnMore_tile"+i).css('cursor','pointer')
+                       $("#learnMore_tile"+i).data('myNum',i)
+               }
+               $("#learnMore_tile1").click(function(e) {
+                       learnSwapFunc(1)
+               });
+               $("#learnMore_tile2").click(function(e) {
+                       learnSwapFunc(2)
+               });
+               $("#learnMore_tile3").click(function(e) {
+                       learnSwapFunc(3)
+               });
+               $("#learnMore_tile4").click(function(e) {
+                       learnSwapFunc(4)
+               });
+               $("#learnMore_tile5").click(function(e) {
+                       learnSwapFunc(5)
+               });
+               $("#learnMore_tile6").click(function(e) {
+                       learnSwapFunc(6)
+               });
+               $("#learnMore_tile7").click(function(e) {
+                       learnSwapFunc(7)
+               });
+               $("#learnMore_tile8").click(function(e) {
+                       learnSwapFunc(8)
+               });
+               $("#learnMore_tile9").click(function(e) {
+                       learnSwapFunc(9)
+               });
+               $("#learnMore_tile10").click(function(e) {
+                       learnSwapFunc(10)
+               });
+               learnSwapFunc(1)
+               $('#learnMoreButton3').click(function(e) {
+            $('#learnMore').remove()
+                       selectScreenFunc()
+        });
+               $('#learnMoreButton1').click(function(e) {
+            if (thePick==1) {
+                               thePick = 3
+                       } else if (thePick==2) {
+                               thePick = 3
+                       } else {
+                               thePick = 1
+                       }
+                       $('#learnMore').remove()
+                       learnMoreScreenFunc()
+        });
+               $('#learnMoreButton2').click(function(e) {
+            if (thePick==1) {
+                               thePick = 2
+                       } else if (thePick==2) {
+                               thePick = 1
+                       } else {
+                               thePick = 2
+                       }
+                       $('#learnMore').remove()
+                       learnMoreScreenFunc()
+        });
+       }
+       
+       function learnSwapFunc(theNum) {
+               for (var i=1;i<=10;i++) {
+                       $("#learnMore_tileImage"+i).attr('src','silver_tile.png')
+               }
+               $("#learnMore_tileImage"+theNum).attr('src','gold_tile.png')
+               if (thePick==1) {
+                       $('#learnMore_image').attr('src','e'+theNum+'.png')
+               } else if (thePick==2) {
+                       $('#learnMore_image').attr('src','j'+theNum+'.png')
+               } else {
+                       $('#learnMore_image').attr('src','l'+theNum+'.png')
+               }
+       }
+       
+       function levelChangeFunc() {
+               if (dropSpeed>1000) {
+                       dropSpeed = dropSpeed-250
+               }
+               if (dropTotal > 10) {
+                       dropTotal = dropTotal-5
+               }
+               odds++
+               $("#iconHolder").children().stop()
+               $("#iconHolder").children().remove()
+               clearTimeout(t);
+               $("#ben").attr('src','ben_center.png')
+               $("#ben").animate({
+                        left: 293
+                }, 1000, function() {
+					if (bonusCount==11) {
+						bonusCount = 12
+						levelTotal = levelTotal+500
+                        $("#extraHolder").append('<img id="theBubble" src="bonus_bubble.png" width="800" height="601" style="position:absolute; top: 0px; left: 0px; z-index:500" />')
+					} else {
+						$("#extraHolder").append('<img id="theBubble" src="word_bubble.png" width="800" height="601" style="position:absolute; top: 0px; left: 0px; z-index:500" />')
+					}
+                        setTimeout(restartAfterPause,2000)
+                       // setTimeout(gameEndFunc,1000);
+                });
+       }
+       
+       function restartAfterPause() {
+		   $("#bDisplay").css('visibility','hidden')
+               $("#theBubble").remove()
+               isPaused = false
+               t = setTimeout(benMover,50);
+       }
+       
+       function benMover() {
+               t = setTimeout(benMover,50);
+               if (isPaused == false) {
+                       levelCount = theScore
+                       if (levelCount>=levelTotal) {
+                               isPaused = true
+                               mysteryTime = Math.floor((Math.random()*240)+levelTotal)
+                               mysteryDone = false
+							   levelTotal = levelTotal+250
+                               levelChangeFunc()
+                       }
+               }
+               if (isPaused == false) {
+                       thirtyCount++
+                       if (thirtyCount==400) {
+                               thirtyCount = 0
+                               if (allowCount<10) {
+                                       allowCount++
+                               }
+                       }
+                       overallTime++
+               basketCount++
+               if (basketCount==5) {
+                       basketState = ''
+                       if (currentBen=='left') {
+                               $('#ben').attr('src', 'ben_left.png');
+                       } else {
+                               $('#ben').attr('src', 'ben_right.png');
+                       }
+					   $("#bDisplay").css('visibility','hidden')
+               }
+               if (mousePos<$("#ben").position().left&&(currentBen == "right"||currentBen == "center")) {
+                       if (basketState=='green') {
+                               $('#ben').attr('src', 'ben_left_green.png');
+                       } else if (basketState=='red') {
+                               $('#ben').attr('src', 'ben_left_red.png');
+                       } else {
+                               $('#ben').attr('src', 'ben_left.png');
+                       }
+                       currentBen = "left"
+               }
+               if (mousePos>$("#ben").position().left&&(currentBen == "left"||currentBen == "center")) {
+                       if (basketState=='green') {
+                               $('#ben').attr('src', 'ben_right_green.png');
+                       } else if (basketState=='red') {
+                               $('#ben').attr('src', 'ben_right_red.png');
+                       } else {
+                               $('#ben').attr('src', 'ben_right.png');
+                       }
+                       currentBen = "right"
+               }
+               $("#ben").css("left",Math.round($("#ben").position().left+((mousePos-$("#ben").position().left)/3)))
+               if ($("#ben").position().left>550) {
+                       $("#ben").css("left",550)
+               }
+               if ($("#ben").position().left<65) {
+                       $("#ben").css("left",65)
+               }
+               if (currentBen=='right') {
+                       $("#theBasket").css('left',$("#ben").position().left+115)
+               } else if (currentBen=='left') {
+                       $("#theBasket").css('left',$("#ben").position().left+30)
+               }
+               dropCount++
+			   clockDelay++
+			   if (clockDelay<400) {
+				   var dropTotalCount = dropTotal+15
+				   var dropSpeedCount = dropSpeed+750
+				   
+			   } else {
+				   dropTotalCount = dropTotal
+				   dropSpeedCount = dropSpeed
+			   }
+               if (dropCount>=dropTotalCount) {
+                       dropCount = 0
+                       if (isPaused==false) {
+                       dropNameCount++
+                       if (totalCaught==3) {
+                               odds = 3
+                               var randGroup = 3
+                       } else {
+                               randGroup = Math.floor(Math.random()*odds)+1
+                       }
+					   var thePos = 134+(69*(Math.floor(Math.random()*8)))
+                       while(thePos==prevPos) {
+                               thePos = 134+(69*(Math.floor(Math.random()*8)))
+                       }
+                       prevPos = thePos
+					   if (theScore>mysteryTime&&mysteryDone==false) {
+						   mysteryDone = true
+						   	$("#iconHolder").append("<img id='drop"+dropNameCount+"' src='mystery_icon.png' style='position: absolute; top: -100px; left: "+thePos+"px' />")
+                       		$("#drop"+dropNameCount).data('myGroup',thePick)
+                       		$("#drop"+dropNameCount).data('myNum',11)
+					   } else {
+                       		if (randGroup==1||randGroup==2) {
+                               		var theGroup = thePick
+                               		posDropNum++
+                               		if (posDropNum>allowCount) {
+                                       		posDropNum = 1
+                               		}
+                               		var theIconPick = orderArray[posDropNum]
+                               		// var theIconPick = orderArray[Math.floor(Math.random()*allowCount)+1]
+                               		var theIconName = 'group'+theGroup+'_icon'+theIconPick+'.png'
+                       		} else {
+                               		theGroup = Math.floor(Math.random()*3)+1
+                               		while (theGroup==thePick) {
+                                       		theGroup = Math.floor(Math.random()*3)+1
+                               		}
+                               		theIconPick = Math.floor(Math.random()*10)+1
+                               		theIconName = 'group'+theGroup+'_icon'+theIconPick+'.png'
+                               		while(theIconName==prevGuy) {
+                                       		theIconPick = Math.floor(Math.random()*10)+1
+                                       		theIconName = 'group'+theGroup+'_icon'+theIconPick+'.png'
+                               		}
+                               		prevGuy = theIconName
+                       		}
+							$("#iconHolder").append("<img id='drop"+dropNameCount+"' src='"+theIconName+"' style='position: absolute; top: -100px; left: "+thePos+"px' />")
+                       		$("#drop"+dropNameCount).data('myGroup',theGroup)
+                       		$("#drop"+dropNameCount).data('myNum',theIconPick)
+					   }
+                       $('#drop'+dropNameCount).animate({
+                               top: 420},{
+                               duration: Math.floor(Math.random()*1500)+dropSpeedCount, easing: 'linear',
+                               step: function(){
+                                       var tempX = $(this).position().left
+                                       var benX = $("#ben").position().left
+                                       var tempY = $(this).position().top
+                                       if ($(this).hitTestObject($("#theBasket"))) {
+                                               if ($(this).data('myGroup')==thePick) {
+												   	if ($(this).data('myNum')==11) {
+														// alert("mystery")
+														var mysteryType = Math.floor(Math.random()*7)+1
+														if (mysteryType<=6) {
+															addToBar(mysteryType,$(this).position().left,$(this).position().top)
+														}
+													} else {
+                                                       totalCaught++
+                                                       basketState = 'green'
+                                                       basketCount = 0
+                                                       if (currentBen=='left') {
+                                                               $('#ben').attr('src', 'ben_left_green.png');
+                                                       } else {
+                                                               $('#ben').attr('src', 'ben_right_green.png');
+                                                       }
+                                                   
+                                                       var tempID = $(this).data('myNum')
+                                                       addToBottom(theGroup,tempID,$(this).position().left,$(this).position().top)
+													   if (totalCaught==1) {
+														    scoreFunc(50)
+                                                       		barHandle(5)
+													   } else {
+														   scoreFunc(20)
+                                                       		barHandle(2)
+													   }
+													}
+                                               } else {
+                                                       // bad
+                                                       basketState = 'red'
+                                                       basketCount = 0
+                                                       if (currentBen=='left') {
+                                                               $('#ben').attr('src', 'ben_left_red.png');
+                                                       } else {
+                                                               $('#ben').attr('src', 'ben_right_red.png');
+                                                       }
+                                                       scoreFunc(-5)
+                                                       barHandle(-10)
+                                               }
+                                               $(this).stop()
+                                               $(this).remove()
+                                       }
+                               },
+                               complete: function(){
+                                       if ($(this).data('myGroup')==thePick) {
+                                               totalDropped++
+                                               barHandle(-5)
+                                       }
+                                       $(this).stop()
+                                       $(this).remove()
+                               }
+                       })
+               }
+               }
+               }
+       }
+  })
+  //]]>
+  </script>
+  <style type="text/css">
+/*<![CDATA[*/
+  body,td,th {
+       font-family: "Arial Black", Gadget, sans-serif;
+  }
+  /*]]>*/
+  </style>
+</head>
+
+<body style="margin-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; -webkit-user-select: none;" ontouchmove="BlockMove(event);">
+  <div id="game" style="position:absolute; top:0px; left:0px; width:800px; height: 600px; background-color:#CFF">
+    <img id="theBackground" src="executive_back.jpg" width="800" height="600" style="position:absolute; top:0px; left:0px; z-index:5;" /><img id="bDisplay" src="bDisp1.png" width="73" height="21" style="position:absolute; top:64px; left:374px; z-index:8; visibility:hidden"><img src="ben_center.png" width="189" height="206" id="ben" style="position: absolute; top: 233px; left: 293px; z-index:10" />
+
+    <div id="iconHolder" style="position:absolute; top:0px; left:0px; width:800px; height:600px; z-index:50"></div>
+
+    <div id="topHolder" style="position:absolute; top:0px; left:0px; width:800px; height:600px; z-index:6000"></div>
+
+    <div id="theBasket" style="position:absolute; top:346px; left:363px; height:10px; width:44px; z-index:100; background-color:#FF0000"></div><img id="theFrame" src="frame.png" width="800" height="600" style="position:absolute; z-index: 500; top:0px; left:0px" />
+
+    <div id="scoreHolder" style="position:absolute; top: 16px; left: 649px; width: 101px; height: 86px; z-index: 700">
+      <img src="score_badge.png" width="101" height="86" />
+
+      <div id="scoreText1" style="position:absolute; top:8px; left: 5px; width: 86px; height: 30px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 24px; color: #000; color: black; z-index:10">
+        2500
+      </div>
+
+      <div id="scoreText2" style="position:absolute; top:10px; left: 7px; width: 86px; height: 30px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 24px; color: #000; color: black; z-index:20">
+        2500
+      </div>
+
+      <div id="scoreText" style="position:absolute; top:9px; left: 6px; width: 86px; height: 30px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 24px; color: #FFF; color: white; z-index:30">
+        2500
+      </div>
+    </div>
+
+    <div id="tileHolder" style="position:absolute; top:483px; left:60px; height:130px; width:720px; z-index:750">
+      <div id="tile1" style="position:absolute; top:0px; left: 0px; width: 68px; height: 130px;">
+        <img id="tileImage1" src="silver_tile.png" width="68" height="70" /><br />
+
+        <div id="tileText1" style="position: absolute; top: 74px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:12px; width: 68px">
+          2500
+        </div>
+
+        <div id="bonus1" style="position: absolute; top: -4px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:18px; width: 25px; height: 20px; background-image:url(red_pill.png); left: 43px; z-index:500">
+          1
+        </div>
+      </div>
+
+      <div id="tile2" style="position:absolute; top:0px; left: 68px; width: 68px; height: 130px;">
+        <img id="tileImage2" src="silver_tile.png" width="68" height="70" /><br />
+
+        <div id="tileText2" style="position: absolute; top: 74px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:12px; width: 68px">
+          2500
+        </div>
+
+        <div id="bonus2" style="position: absolute; top: -4px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:18px; width: 25px; height: 20px; background-image:url(red_pill.png); left: 43px; z-index:500">
+          1
+        </div>
+      </div>
+
+      <div id="tile3" style="position:absolute; top:0px; left: 136px; width: 68px; height: 130px;">
+        <img id="tileImage3" src="silver_tile.png" width="68" height="70" /><br />
+
+        <div id="tileText3" style="position: absolute; top: 74px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:12px; width: 68px">
+          2500
+        </div>
+
+        <div id="bonus3" style="position: absolute; top: -4px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:18px; width: 25px; height: 20px; background-image:url(red_pill.png); left: 43px; z-index:500">
+          1
+        </div>
+      </div>
+
+      <div id="tile4" style="position:absolute; top:0px; left: 204px; width: 68px; height: 130px;">
+        <img id="tileImage4" src="silver_tile.png" width="68" height="70" /><br />
+
+        <div id="tileText4" style="position: absolute; top: 74px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:12px; width: 68px">
+          2500
+        </div>
+
+        <div id="bonus4" style="position: absolute; top: -4px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:18px; width: 25px; height: 20px; background-image:url(red_pill.png); left: 43px; z-index:500">
+          1
+        </div>
+      </div>
+
+      <div id="tile5" style="position:absolute; top:0px; left: 272px; width: 68px; height: 130px;">
+        <img id="tileImage5" src="silver_tile.png" width="68" height="70" /><br />
+
+        <div id="tileText5" style="position: absolute; top: 74px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:12px; width: 68px">
+          2500
+        </div>
+
+        <div id="bonus5" style="position: absolute; top: -4px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:18px; width: 25px; height: 20px; background-image:url(red_pill.png); left: 43px; z-index:500">
+          1
+        </div>
+      </div>
+
+      <div id="tile6" style="position:absolute; top:0px; left: 340px; width: 68px; height: 130px;">
+        <img id="tileImage6" src="silver_tile.png" width="68" height="70" /><br />
+
+        <div id="tileText6" style="position: absolute; left: -8px; top: 74px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:12px; width: 84px">
+          2500
+        </div>
+
+        <div id="bonus6" style="position: absolute; top: -4px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:18px; width: 25px; height: 20px; background-image:url(red_pill.png); left: 43px; z-index:500">
+          1
+        </div>
+      </div>
+
+      <div id="tile7" style="position:absolute; top:0px; left: 408px; width: 68px; height: 130px;">
+        <img id="tileImage7" src="silver_tile.png" width="68" height="70" /><br />
+
+        <div id="tileText7" style="position: absolute; top: 74px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:12px; width: 68px">
+          2500
+        </div>
+
+        <div id="bonus7" style="position: absolute; top: -4px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:18px; width: 25px; height: 20px; background-image:url(red_pill.png); left: 43px; z-index:500">
+          1
+        </div>
+      </div>
+
+      <div id="tile8" style="position:absolute; top:0px; left: 476px; width: 68px; height: 130px;">
+        <img id="tileImage8" src="silver_tile.png" width="68" height="70" /><br />
+
+        <div id="tileText8" style="position: absolute; top: 74px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:12px; width: 68px">
+          2500
+        </div>
+
+        <div id="bonus8" style="position: absolute; top: -4px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:18px; width: 25px; height: 20px; background-image:url(red_pill.png); left: 43px; z-index:500">
+          1
+        </div>
+      </div>
+
+      <div id="tile9" style="position:absolute; top:0px; left: 544px; width: 68px; height: 130px;">
+        <img id="tileImage9" src="silver_tile.png" width="68" height="70" /><br />
+
+        <div id="tileText9" style="position: absolute; top: 74px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:12px; width: 68px">
+          2500
+        </div>
+
+        <div id="bonus9" style="position: absolute; top: -4px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:18px; width: 25px; height: 20px; background-image:url(red_pill.png); left: 43px; z-index:500">
+          1
+        </div>
+      </div>
+
+      <div id="tile10" style="position:absolute; top:0px; left: 612px; width: 68px; height: 130px;">
+        <img id="tileImage10" src="silver_tile.png" width="68" height="70" /><br />
+
+        <div id="tileText10" style="position: absolute; top: 74px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:12px; width: 68px">
+          2500
+        </div>
+
+        <div id="bonus10" style="position: absolute; top: -4px; font-family: 'Arial Black', Gadget, sans-serif; text-align: center; font-size: 11px; color: #FFF; color: white; line-height:18px; width: 25px; height: 20px; background-image:url(red_pill.png); left: 43px; z-index:500">
+          1
+        </div>
+      </div>
+    </div>
+
+    <div id="theSlider" style="position:absolute; top: 26px; left: 269px; z-index: 100; width: 279px; height: 37px; background-image:url(topbar.png)">
+      <img id="theMeter" src="topbar_meter.png" width="33" height="34" style="position:absolute; left:124px" />
+    </div>
+
+    <div id="extraHolder" style="position:absolute; top: 0px; left: 0px; width: 800px; height: 600px; z-index: 9000">
+      <img id="iButton2" src="i_button2.png" width="50" height="50" style="position: absolute; top: 546px; left: 746px; z-index: 2; cursor: pointer" />
+    </div>
+  </div>
+
+  <div id="lScreen" width="800" height="600" style="position:absolute; top:0px; left:0px; z-index:9000; visibility:hidden">
+    <img id="lScreen2" src="loader_start.gif" width="800" height="600" style="position:absolute; top:0px; left:0px; z-index:500;" />
+
+    <div id="lBar" style="position: absolute; top: 564px; left: 257px; width: 5px; height: 10px; z-index: 501; background-color:#C00"></div>
+  </div>
+</body>
+</html>

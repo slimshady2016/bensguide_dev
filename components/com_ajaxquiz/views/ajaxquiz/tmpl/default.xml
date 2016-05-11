@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="AjaxQuiz Default Layout">
+		<message>
+			<![CDATA[AJAXQUIZ DEFAULT LAYOUT DESCRIPTION]]>
+		</message>
+	</layout>
+
+	<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/administrator/components/com_ajaxquiz/models/fields"
+		>
+
+			<field name="cid" type="catlist"
+				label="COM_AJAXQUIZ_CATEGORY_TITLE"
+				required="true"
+			/>
+		</fieldset>
+		
+	</fields>
+	<!-- Add fields to the parameters object for the layout. -->
+    <fields name="params">
+                <fieldset name="AjaxQuiz" label="AjaxQuiz Configuration">
+                        <field name="startimg" type="text" size="70" default="components/com_ajaxquiz/assets/images/start.png" label="STRT_IMG" description="STRT_DES" />
+                        <field name="starttxt" type="text" size="70" default="Let\'s get started!" label="STRT_TXT" description="STRT_DES" />
+                        <field name="endtxt" type="text" size="70" default="Finished!" label="END_TXT" description="END_DES" />
+                        <field name="perfecttxt" type="text" size="70" default="Perfect!" label="PER_TXT" description="PER_DES" />
+                        <field name="excelltxt" type="text" size="70" default="Excellent!" label="EXC_TXT" description="EXC_DES" />
+                        <field name="goodtxt" type="text" size="70" default="Good!" label="GOOD_TXT" description="GOOD_DES" />
+                        <field name="acctxt" type="text" size="70" default="Acceptable!" label="ACC_TXT" description="ACC_DES" />
+                        <field name="distxt" type="text" size="70" default="Disappointing!" label="DIS_TXT" description="DIS_DES" />
+                        <field name="poortxt" type="text" size="70" default="Poor!" label="POOR_TXT" description="POOR_DES" />
+                        <field name="nadatxt" type="text" size="70" default="Nada!" label="NADA_TXT" description="NADA_DES" />
+                        <field name="questiontitle" type="radio" default="1" label="QUES_TITLE" description="QUES_TITLE_DES">
+                                <option value="0">ARG_NO</option>
+                                <option value="1">ARG_YES</option>
+                        </field>
+                        <field name="mailenable" type="radio" default="0" label="RESULT_MAIL" description="RESULTMAIL_DES">
+                                <option value="0">ARG_NO</option>
+                                <option value="1">ARG_YES</option>
+                        </field>
+                        <field name="userenable" type="radio" default="0" label="REGISTER_ACCESS" description="REGISTER_DES">
+                                <option value="0">ARG_NO</option>
+                                <option value="1">ARG_YES</option>
+                        </field>
+                        <field name="resultshow" type="radio" default="1" label="RESULT_SHOW" description="RESULT_DES">
+                                <option value="0">ARG_NO</option>
+                                <option value="1">ARG_YES</option>
+                        </field>
+                        <field name="loadjquery" type="radio" default="1" label="LOAD_JQUERY" description="LOAD_JQUERY_DES">
+                                <option value="0">ARG_NO</option>
+                                <option value="1">ARG_YES</option>
+                        </field>
+                </fieldset>
+                 <fieldset name="AjaxQuiz1" label="AjaxQuiz Social Share Configuration">
+                        <field name="twittershow" type="radio" default="1" label="TWIT_SHOW" description="TWIT_DES">
+                                <option value="0">ARG_NO</option>
+                                <option value="1">ARG_YES</option>
+                        </field>
+                        <field name="twitteruser" type="text" size="70" default="webkul" label="TWET_USER" description="TWETUSER_DES" />
+                        <field name="twittertxt" type="text" size="70" default="Woo! I got {score} on the quiz. Try it!" label="TWET_TXT" description="TWETTXT_DES" />
+                        <field name="fbshow" type="radio" default="1" label="FB_SHOW" description="FB_DES">
+                                <option value="0">ARG_NO</option>
+                                <option value="1">ARG_YES</option>
+                        </field>
+                        <field name="gplusshow" type="radio" default="1" label="GPLUS_SHOW" description="GPLUS_DES">
+                                <option value="0">ARG_NO</option>
+                                <option value="1">ARG_YES</option>
+                        </field>
+                        <field name="linkedshow" type="radio" default="1" label="LINKED_SHOW" description="LINKED_DES">
+                                <option value="0">ARG_NO</option>
+                                <option value="1">ARG_YES</option>
+                        </field>
+                </fieldset>
+     </fields>
+</metadata>

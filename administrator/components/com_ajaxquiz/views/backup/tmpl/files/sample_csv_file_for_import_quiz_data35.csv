@@ -1,0 +1,33 @@
+Quiz Category Name,Question Title,Question Description,Answer,"Correct Answer (1 for Correct,0 for wrong)",Quiz Duration
+Category1,question11,This is question1 description,This is answer1 for question1 ,1,0:00:00
+,,,This is answer2 for question1 ,0,
+,,,This is answer3 for question1 ,0,
+,,,This is answer4 for question1 ,0,
+,question12,This is question2 description,This is answer1 for question2 ,0,0:00:00
+,,,This is answer2 for question2,0,
+,,,This is answer3 for question2 ,1,
+,,,This is answer4 for question2 ,0,
+Category2,question21,This is question3 description,This is answer1 for question3 ,0,0:00:00
+,,,This is answer2 for question3,0,
+,,,This is answer3 for question3 ,1,
+,,,This is answer4 for question3 ,0,
+Category3,question31,This is question31 description,This is answer1 for question31 ,0,0:30:00
+,,,This is answer2 for question31,0,
+,,,This is answer3 for question31 ,1,
+,,,This is answer4 for question31,0,
+,question32,This is question32 description,This is answer1 for question32 ,0,
+,,,This is answer2 for question32,0,
+,,,This is answer3 for question32,1,
+,,,This is answer4 for question32 ,0,
+,question33,This is question33 description,This is answer1 for question33,0,
+,,,This is answer2 for question33,0,
+,,,This is answer3 for question33,1,
+,,,This is answer4 for question33 ,0,
+,question34,This is question34 description,This is answer1 for question34,0,
+,,,This is answer2 for question34,0,
+,,,This is answer3 for question34,1,
+,,,This is answer4 for question34,0,
+,question35,This is question35 description,This is answer1 for question35,0,
+,,,This is answer2 for question35,0,
+,,,This is answer3 for question35,1,
+,,,This is answer4 for question35,0,

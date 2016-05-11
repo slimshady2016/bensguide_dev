@@ -1,0 +1,70 @@
+.backup_quiz{
+    float: left;
+    width: 100%;
+}
+
+#export_table{
+   float: left;
+    margin-left: 15px;
+    width: 120px;
+}
+
+#export_option{
+    font-size: 13px;
+  margin-top: 8px;
+}
+
+#export{
+    background: none repeat scroll 0 0 #6182E0;
+    border-bottom: 1px solid #DDDDDD;
+    color: #FFFFFF;
+    display: block;
+    font-size: 11px;
+    margin: 5px 0;
+    padding: 4px 0;
+    text-align: center;
+    width: 135px;
+}
+
+#download_btn{
+  float: left;
+    margin-left: 5px;
+}
+
+#file-uploader{
+   float: left;
+    margin-left: 100px;
+}
+
+.qq-upload-button{
+    margin: 5px 0;
+    padding: 5px 0;
+	  width: 135px;
+}
+
+.qq-upload-button-hover{
+   background: none repeat scroll 0 0 #880000;
+}
+
+.qq-upload-list {
+    list-style: none outside none;
+    margin: 15px 0;
+    padding: 0;
+}
+
+#delete_btn{
+    float: left;
+	 margin-left: 100px;
+}
+
+#delete{
+    background: none repeat scroll 0 0 #538966;
+    border-bottom: 1px solid #DDDDDD;
+    color: #FFFFFF;
+    display: block;
+    font-size: 11px;
+    margin: 5px 0;
+    padding: 4px 0;
+    text-align: center;
+    width: 105px;
+}

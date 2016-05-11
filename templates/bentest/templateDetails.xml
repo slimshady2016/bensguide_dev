@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="template">
+        <name>Ben's Guide Base Template</name>
+        <creationDate>March 2013</creationDate>
+        <author>Virtual Mind</author>
+        <authorEmail>email@email.com</authorEmail>
+        <authorUrl>http://www.url.com</authorUrl>
+        <copyright>copyright</copyright>
+        <version>1.0.1</version>
+        <description>Ben's Guide Base Template</description>
+        <files>
+                <filename>index.php</filename>
+                <filename>templateDetails.xml</filename>
+                <folder>images</folder>
+                <folder>css</folder>
+				<folder>js</folder>
+                <folder>scripts</folder>
+				<folder>html</folder>
+				<folder>games</folder>
+        </files>
+        <positions>
+                <position>mobileNav</position>
+                <position>top-nav-left</position>
+                <position>top-nav-right</position>
+                <position>main-logo</position>
+                <position>main-menu</position>
+				<position>learn-more</position>
+				<position>left-nav-noindex</position>
+        </positions>
+</extension>

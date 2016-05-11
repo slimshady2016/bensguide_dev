@@ -1,0 +1,56 @@
+// Media objects
+// Source: http://stubbornella.org/content/?p=497
+// --------------------------------------------------
+
+
+// Common styles
+// -------------------------
+
+// Clear the floats
+.yee-media,
+.yee-media-body {
+  overflow: hidden;
+  zoom: 1;
+}
+
+// Proper spacing between instances of .media
+.yee-media,
+.yee-media .yee-media {
+  margin-top: 15px;
+}
+.yee-media:first-child {
+  margin-top: 0;
+}
+
+// For images and videos, set to block
+.yee-media-object {
+  display: block;
+}
+
+// Reset margins on headings for tighter default spacing
+.yee-media-heading {
+  margin: 0 0 5px;
+}
+
+
+// Media image alignment
+// -------------------------
+
+.yee-media {
+  > .pull-left {
+    margin-right: 10px;
+  }
+  > .pull-right {
+    margin-left: 10px;
+  }
+}
+
+
+// Media list variation
+// -------------------------
+
+// Undo default ul/ol styles
+.yee-media-list {
+  padding-left: 0;
+  list-style: none;
+}

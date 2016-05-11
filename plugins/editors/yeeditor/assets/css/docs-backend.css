@@ -1,0 +1,154 @@
+/* for joomla backend control the content edit area width*/
+div.btnOptionPanel {
+    background: url("../img/btn-hide-options-panel.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    height: 126px;
+    position: absolute;
+    right: 2px;
+    top: 264px;
+    width: 15px;
+}
+div.btnOptionPanel.show {
+    background: url("../img/btn-show-options-panel.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+/* for improve backend css */
+.yeeditor{
+	padding:5px;
+}
+.yeeditor img{
+	max-width:100%;
+}
+.yeeditor-content {
+	margin-top:5px;	
+}
+#yee_content{
+	width:100%;
+	height:600px;
+	margin-top:5px;
+}
+.yeeditor-backdrop{
+    height: 254px;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+	margin-left:-5px;
+	margin-top:-1px;
+	background:url("../img/loading.gif") no-repeat scroll center center #bbb;
+}
+.yee-modal .yee-tab-content .yee-well, .yee-wgt-tabs .yee-tab-content .yee-well {
+  -webkit-box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.09), 0 1px 4px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.09), 0 1px 4px rgba(255, 255, 255, 0.1);
+  background-color: #ecf0f1;
+}
+.main-yee-layout{
+	min-height:200px;
+}
+.yee-dropdown-menu li{
+	list-style: none outside none;
+}
+.yee-modal-backdrop.fade.in.in {
+    opacity: 0.5;
+}
+
+/* images list */
+.yee-images-list {
+    margin: 0;
+}
+.yee-images-list li{
+	list-style: none outside none;
+	float:left;
+	margin-left:2px;
+}
+.yee-images-list img, .image_show {
+    height: 25px;
+    width: auto;
+}
+/* images list end */
+
+/* fix the conflict with yeeditor.frontend.css */
+.colorpicker.yee-dropdown-menu{
+	z-index:2500;
+}
+
+/* fix for K2 */
+.yeeditor .ui-sortable span {
+    height: 0px;
+}
+
+/* column class yee-col-2-4(1/5) */
+.yee-col-xs-2-4, .yee-col-sm-2-4, .yee-col-md-2-4, .yee-col-lg-2-4 {
+	position: relative;
+	min-height: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.yee-col-xs-2-4 {
+	float: left;
+}
+.yee-col-xs-2-4 {
+  width: 20%;
+}
+.yee-col-xs-pull-2-4 {
+  right: 20%;
+}
+.yee-col-xs-push-2-4 {
+  left: 20%;
+}
+.yee-col-xs-offset-2-4 {
+  margin-left: 20%;
+}
+@media (min-width: 768px) {
+.yee-col-sm-2-4 {
+	float: left;
+}
+.yee-col-sm-2-4 {
+    width: 20%;
+}
+.yee-col-sm-pull-2-4 {
+    right: 20%;
+}
+.yee-col-sm-push-2-4 {
+    left: 20%;
+}
+.yee-col-sm-offset-2-4 {
+    margin-left: 20%;
+}
+}
+@media (min-width: 992px) {
+.yee-col-md-2-4 {
+	float: left;
+}
+.yee-col-md-2-4 {
+    width: 20%;
+}
+.yee-col-md-pull-2-4 {
+    right: 20%;
+}
+.yee-col-md-push-2-4 {
+    left: 20%;
+}
+.yee-col-md-offset-2-4 {
+    margin-left: 20%;
+}
+}
+@media (min-width: 1200px) {
+.yee-col-lg-2-4 {
+	float: left;
+}
+.yee-col-lg-2-4 {
+    width: 20%;
+}
+.yee-col-lg-pull-2-4 {
+    right: 20%;
+}
+.yee-col-lg-push-2-4 {
+    left: 20%;
+}
+.yee-col-lg-offset-2-4 {
+    margin-left: 20%;
+}
+}
+
+

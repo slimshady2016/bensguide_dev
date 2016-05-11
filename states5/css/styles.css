@@ -1,0 +1,767 @@
+@CHARSET "UTF-8";
+
+@font-face {
+    font-family: 'toonish';
+    src: url('fonts/toonish-webfont.eot');
+    src: url('fonts/toonish-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/toonish-webfont.woff2') format('woff2'),
+         url('fonts/toonish-webfont.woff') format('woff'),
+         url('fonts/toonish-webfont.ttf') format('truetype'),
+         url('fonts/toonish-webfont.svg#toonishregular') format('svg');
+}
+@font-face {
+    font-family: 'alegreya';
+    src: url('fonts/alegreya-regular-webfont.eot');
+    src: url('fonts/alegreya-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/alegreya-regular-webfont.woff2') format('woff2'),
+         url('fonts/alegreya-regular-webfont.woff') format('woff'),
+         url('fonts/alegreya-regular-webfont.ttf') format('truetype'),
+         url('fonts/alegreya-regular-webfont.svg#alegreyaregular') format('svg');
+}
+
+@font-face {
+    font-family: 'alegreya-bold';
+    src: url('fonts/alegreya-bold-webfont.eot');
+    src: url('fonts/alegreya-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/alegreya-bold-webfont.woff2') format('woff2'),
+         url('fonts/alegreya-bold-webfont.woff') format('woff'),
+         url('fonts/alegreya-bold-webfont.ttf') format('truetype'),
+         url('fonts/alegreya-bold-webfont.svg#alegreyabold') format('svg');
+
+}
+
+a{
+	-webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-moz-backface-visibility: hidden;
+    -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+	-o-backface-visibility: hidden;
+    -o-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/*
+html{background-color:#57BE59;}
+*/
+html, body{margin:0px; padding:0px;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0;
+    height:100%;
+    font-family: toonish;
+    text-transform:uppercase;
+    font-size:100%;
+    overflow:hidden;
+    }
+
+
+body {
+  	background: url(../svg/greenBGLow.jpg) no-repeat center center fixed;
+	background-size: cover;
+	/* For older browsers */
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0;
+    z-index: 1;
+    height:100%;
+    overflow:hidden; 
+}
+.modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0;
+    z-index: 999;
+    }
+    
+#modalHelp{background: url(../svg/greenBGLow.jpg) no-repeat center center fixed;}
+#modalWin{background: url(../svg/orangeBGLow.jpg) no-repeat center center fixed;}
+
+body.orange {
+  	background: url(../svg/orangeBGLow.jpg) no-repeat center center fixed;
+}
+body.yellow {
+  	background: url(../svg/yellowBGLow.jpg) no-repeat center center fixed;
+}
+
+#animatedModal{ background-color:transparent !important; background: url(../svg/greenBGLow.jpg) no-repeat center center fixed;}
+#winnerModal{ background-color:transparent !important; background: url(../svg/orangeBGLow.jpg) no-repeat center center fixed;}
+
+
+
+.container{
+  width: 100vw;
+  height: 56.25vw;
+  /* 100/56.25 = 1.778 */
+  max-height: 100vh;
+  max-width: 177.78vh;
+  /* 16/9 = 1.778 */
+  margin: auto;
+  position: absolute;
+  /* vertical centered */
+  top: 0;
+  bottom: 0;
+  /* horizontal centered */
+  left: 0;
+  right: 0;
+  }
+
+.imgFull{
+    max-width: 100%;
+    max-height: 100%;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    
+/*--------INDEX---------*/
+#placeStatesText{
+	bordeer: 2px solid green; 
+	position:absolute;
+	width:48%;
+	top:0%; 
+	bottom:7%;
+	right:19%; 
+    background-image: url("../svg/index-place-states.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+	z-index:400;
+	}
+#indexStars01{
+	bordeer: 2px solid green; 
+	position:absolute;
+	width:60%;
+	top:0%; 
+	bottom:6%;
+	right:13%; 
+    background-image: url("../svg/index-stars-01.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+	z-index:400;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 0s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-duration: 1s;
+  -o-animation-delay: 0s;
+  -o-animation-iteration-count: infinite;
+	}
+#indexStars02{
+	bordeer: 2px solid green; 
+	position:absolute;
+	width:60%;
+	top:0%; 
+	bottom:6%;
+	right:13%; 
+    background-image: url("../svg/index-stars-02.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+	z-index:400;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0.3s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 0.3s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-duration: 1s;
+  -o-animation-delay: 0.3s;
+  -o-animation-iteration-count: infinite;
+	}
+#indexStars03{
+	bordeer: 2px solid green; 
+	position:absolute;
+	width:60%;
+	top:0%; 
+	bottom:6%;
+	right:13%; 
+    background-image: url("../svg/index-stars-03.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+	z-index:400;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0.6s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 0.6s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-duration: 1s;
+  -o-animation-delay: 0.6s;
+  -o-animation-iteration-count: infinite;
+	}
+#btPlay{ 
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+	display:inline-block;
+	position:absolute;
+    width: 25%;
+    bottom: 4%;
+    height: 13%;
+    left: 45%;
+    background-image: url("../svg/btSprites.png");
+    background-repeat:no-repeat;
+	background-position: 50% 11.9%;
+	background-size: 157%;
+	z-index:400;
+	cursor:pointer;
+	}
+#btPlay:hover, #btPlay:focus, #btPlay:active{
+    background-image: url("../svg/btSprites.png");
+	background-position: 49.2% 66.2%;
+	cursor:pointer;
+	}
+/*--------END INDEX---------*/
+
+
+/*--------INSTRUCTIONS---------*/
+#instructionsPlaceStatesText{
+	bordeer: 2px solid green; 
+	position:absolute;
+	width:35%;
+	top:7%; 
+	height:20%;
+	right:25%; 
+    background-image: url("../svg/instructions-place-states.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+	z-index:400;
+	}
+
+#instructionsText{
+	bordeer: 2px solid green; 
+	position:absolute;
+	width:51%;
+	top:26%; 
+	left:32%; 
+	z-index:400;
+	font-family:"alegreya-bold";
+	text-transform:initial;
+	font-size:1.9em;
+	text-align:center;
+	}
+	
+#btInstructionsPlay{
+	display:inline-block;
+	position:absolute;
+    width: 25%;
+    bottom: 4%;
+    height: 13%;
+    left: 45%;
+    background-image: url("../svg/btSprites.png");
+    background-repeat:no-repeat;
+	background-position: 50% 11.9%;
+	background-size: 157%;
+	z-index:400;
+	cursor:pointer;
+	}
+#btInstructionsPlay:hover, #btInstructionsPlay:focus, #btInstructionsPlay:active{
+    background-image: url("../svg/btSprites.png");
+	background-position: 49.2% 66.2%;
+	cursor:pointer;
+	}
+
+	
+/*--------END INSTRUCTIONS---------*/
+
+/*--------GAME---------*/
+
+#audio{display:none; font-size:0;}
+
+#inlineStates{display:none;}
+
+#inlineStates.showLines{display:block;}
+
+#gamePlaceStatesText{
+	bordeer: 2px solid green; 
+	position:absolute;
+	width:28%;
+	top:6%; 
+	height:32%;
+	left:6%; 
+    background-image: url("../svg/game-place-states.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+	z-index:400;
+	}
+
+#stateName{
+	bordeer: 1px solid green; 
+	position:absolute;
+    width: 20%;
+    top: 7%;
+    height: 9%;
+    right: 16%;
+    text-align:center;
+    font-size:100%; 
+    letter-spacing:1px;
+	}   
+#stateCapitol{font-size:0.7em; }
+
+#btLines{
+	display:inline-block;
+	bordeer: 2px solid green; 
+	position:absolute;
+    width: 13%;
+    top: 50%;
+    height: 12%;
+    right: 4%;
+    background-image: url("../svg/btSprites.png");
+    background-repeat:no-repeat;
+	background-position: 52% 21%;
+	background-size: 220%;
+	z-index:400;
+	cursor:pointer;
+	} 
+#btLines.active{ 
+	background-image: url("../svg/btSprites.png");
+	background-position: 52% 76.65%;
+	cursor:pointer;
+	}
+	
+#btHelp{
+	display:inline-block;
+	bordeer: 2px solid green; 
+	position:absolute;
+    width: 13%;
+    top: 62%;
+    height: 10%;
+    right: 5%;
+    background-image: url("../svg/btSprites.png");
+    background-repeat:no-repeat;
+	background-position: 50% 33%;
+	background-size: 220%;
+	z-index:400;
+	cursor:pointer;
+	}  
+#btHelp:hover, #btHelp:focus, #btHelp:active{
+	background-image: url("../svg/btSprites.png");
+	background-position: 49.5% 87.6%;
+	cursor:pointer;
+    } 
+	
+.gameMap{
+	bordeer: 1px solid blue; 
+	position:absolute;
+	width:62%;
+	top:10%; 
+	bottom:23%;
+	bottom:-3%;
+	left:26.5%; 
+	z-index:300;
+	}
+.gameMap svg{ height:auto; width:auto; max-width:100%; max-height:100%;}
+
+.gameStates{
+	bordeer: 1px solid red; 
+	position:absolute;
+	width:63%;
+	top:77%; 
+	left:25%; 
+	bottom:5%;
+	overflow:visible;
+	}
+
+.fill{position:absolute; top:0px; left:0px; opacity:0;  z-index:500;}
+
+
+/*--------END GAME---------*/
+
+/*--------HELP---------*/
+
+#helpTitle{
+	bordeer: 2px solid green; 
+	position:absolute;
+	width:25%;
+	top:10%; 
+	height:25%;
+	left:12%; 
+    background-image: url("../svg/help-title.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+	z-index:400;
+	}
+#helpText{
+	bordeer: 2px solid green; 
+	position:absolute;
+	width:57%;
+	top:35%; 
+	height:40%;
+	left:23%; 
+	z-index:400;
+	font-family:"alegreya-bold";
+	text-transform:initial;
+	font-size:1.7em;
+	}
+    
+#snapGreat{
+	bordeer: 2px solid green; 
+	position:absolute;
+    width: 15%;
+    bottom: 19%;
+    height: 25%;
+    left: 16%;
+    background-image: url("../svg/game-great.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+	z-index:400;
+  }
+#snapStars01{
+	bordeer: 2px solid green; 
+	position:absolute;
+    width: 6%;
+    bottom: 28%;
+    height: 25%;
+    left: 18%;
+    background-image: url("../svg/game-star-blue.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+	z-index:400;
+  }
+#snapStars02{
+	bordeer: 2px solid green; 
+	position:absolute;
+    width: 6%;
+    bottom: 11%;
+    height: 25%;
+    left: 21%;
+    background-image: url("../svg/game-star-red.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+	z-index:400;
+  }
+#snapStars03{
+	bordeer: 2px solid green; 
+	position:absolute;
+    width: 6%;
+    bottom: 27%;
+    height: 25%;
+    left: 23%;
+    background-image: url("../svg/game-star-white.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+	z-index:400;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 0s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-duration: 1s;
+  -o-animation-delay: 0s;
+  -o-animation-iteration-count: infinite;
+  }
+
+#btBack{
+	bordeer: 2px solid green; 
+	display:inline-block;
+	position:absolute;
+    width:35%;
+    bottom: 6%;
+    height: 16%;
+    left: 36%;
+    background-image: url("../svg/btSprites.png");
+    background-repeat:no-repeat;
+	background-position: center 45%;
+	background-size: 100%;
+	z-index:400;
+	cursor:pointer;
+	}
+#btBack:hover, #btBack:focus, #btBack:active{
+    background-image: url("../svg/btSprites.png");
+	background-position: center 101%;
+	background-size: 100%;
+	}
+	
+/*--------END HELP---------*/
+
+/*--------WIN---------*/
+#winStars01{
+	bordeer: 2px solid green; 
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0; 
+	left:0;
+    background-image: url("../svg/win-stars-01.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+	z-index:400;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 0s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-duration: 1s;
+  -o-animation-delay: 0s;
+  -o-animation-iteration-count: infinite;
+	}
+#winStars02{
+	bordeer: 2px solid green; 
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0; 
+	left:0;
+    background-image: url("../svg/win-stars-02.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+	z-index:400;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0.3s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 0.3s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-duration: 1s;
+  -o-animation-delay: 0.3s;
+  -o-animation-iteration-count: infinite;
+	}
+#winStars03{
+	bordeer: 2px solid green; 
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0; 
+	left:0;
+    background-image: url("../svg/win-stars-03.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:center;
+	z-index:400;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0.6s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 0.6s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-duration: 1s;
+  -o-animation-delay: 0.6s;
+  -o-animation-iteration-count: infinite;
+	}
+	
+#winCongratulations{
+	bordeer: 2px solid green; 
+	position:absolute;
+	width:100%;
+	height:95%;
+	top:5%; 
+	left:0;
+    background-image: url("../svg/win-congratulations.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:top;
+	z-index:500;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-duration: 2s;
+  -o-animation-iteration-count: infinite;
+	}
+	
+#winBen{
+	bordeer: 2px solid green; 
+	position:absolute;
+	width:100%;
+	height:75%;
+	top:20%; 
+	left:0;
+    background-image: url("../svg/win-ben.png");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position:top;
+	z-index:500;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-duration: 2s;
+  -o-animation-iteration-count: infinite;
+	}
+	
+#btReplay{
+	display:inline-block;
+	position:absolute;
+    width: 33%;
+    bottom: 4%;
+    height: 20%;
+    left: 33%;
+    background-image: url("../svg/btSprites.png");
+    background-repeat:no-repeat;
+	background-position: 50% 0.4%;
+	background-size: 170%;
+	z-index:600;
+	cursor:pointer;
+  	-webkit-animation-delay: 2s;
+  	-moz-animation-delay: 2s;
+  	-o-animation-delay: 2s;
+	}
+#btReplay:hover, #btReplay:focus, #btReplay:active{
+    background-image: url("../svg/btSprites.png");
+	background-position: 49.5% 55%;
+	}
+    
+/*--------END WIN---------*/
+
+
+
+
+
+
+
+/*==========  Mobile First Method  ==========*/
+
+
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+    
+    	#helpText{
+    		font-size:7px;
+    	}
+    
+    	#instructionsText{
+    		font-size:8px;
+    	}
+        
+    }
+
+
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+    
+    	#helpText{
+    		font-size:0.7em;
+    	}
+    
+    	#instructionsText{
+    		font-size:0.75em;
+    	}
+      
+    }
+    
+       /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 550px) {
+    
+    	#helpText{
+    		font-size:0.9em;
+    	}
+    
+    	#instructionsText{
+    		font-size:0.96em;
+    	}
+      
+    }
+
+    /*NEXUS PORTRAIT*/
+	@media only screen and (min-width : 604px) and (orientation: portrait) {
+    
+    	#helpText{
+    		font-size:1.1em;
+    	}
+    	
+    
+    	#instructionsText{
+    		font-size:1.2em;
+    	}
+	}
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+    
+    	#helpText{
+    		font-size:1.1em;
+    	}
+    	
+    
+    	#instructionsText{
+    		font-size:1.2em;
+    	}
+    	
+    	
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+    
+    	#helpText{
+    		font-size:1.5em;
+    	}
+    	
+    
+    	#instructionsText{
+    		font-size:1.6em;
+    	}
+    	
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+    	
+    	#helpText{
+    		font-size:1.7em;
+    	}
+    
+    	#instructionsText{
+    		font-size:1.9em;
+    	}
+    	
+
+    }
+       /*
+ .aButton{display:inline-block;}  
+ 
+    
+.help-bt-back-hover, .help-bt-back, .win-bt-replay-hover, .win-bt-replay, #btInstructionsPlay, 
+.instructions-bt-play, .game-bt-help-hover, .game-bt-help, .game-bt-lines-hover, .game-bt-lines, 
+.index-bt-play-hover, .index-bt-play
+{ max-width: 100%; background-size: 100%; background-image: url('../svg/png.png'); }
+ 
+.help-bt-back-hover { background-position: 0 0%; background-size: 100%; }
+.help-bt-back { background-position: 0 8.838568%; background-size: 100%; }
+.win-bt-replay-hover { background-position: 0 18.250377%; background-size: 134.760705%; }
+.win-bt-replay { background-position: 0 30.618401%; background-size: 134.760705%; }
+#btInstructionsPlay:hover { background-position: 0 42.986425%; background-size: 147.38292%; }
+#btInstructionsPlay { background-position: 0 55.354449%; background-size: 147.38292%; }
+.game-bt-help-hover { background-position: 0 64.978292%; background-size: 217.479675%; }
+.game-bt-help { background-position: 0 72.793054%; background-size: 217.479675%; }
+.game-bt-lines-hover { background-position: 0 79.856631%; background-size: 217.479675%; }
+.game-bt-lines { background-position: 0 86.666667%; background-size: 217.479675%; }
+.index-bt-play-hover { background-position: 0 93.342878%; background-size: 250%; }
+.index-bt-play { background-position: 0 100%; background-size: 250%; }
+    
+    
+
+
+*/
+
+
+

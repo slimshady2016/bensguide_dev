@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade" version="3.0">
+	<name>com_yeeditor</name>
+	<author>YEEDEEN</author>
+	<creationDate>DEC 6 2013</creationDate>
+	<copyright>Copyright (C) 2013</copyright>
+	<license>GNU General Public License version 2 or later; see http://yeedeen.com/license</license>
+	<authorEmail>N/A</authorEmail>
+	<authorUrl>http://yeeditor.com</authorUrl>
+	<version>2.01</version>
+	<description>YE editor component.It is show our message and install/manage the extensions</description>
+	
+	<files folder="components/com_yeeditor">
+		<folder>views</folder>
+		<folder>widgets_ex</folder>
+		<filename>controller.php</filename>
+		<filename>yeeditor.php</filename>
+		<filename>index.html</filename>
+	</files>
+
+	<administration>
+		<submenu>
+			<menu link="option=com_yeeditor" view="COM_YEEDITOR_FIELD_YEEDITOR" 
+				alt="YEEditor/YEEditor">COM_YEEDITOR_FIELD_YEEDITOR</menu>
+			<menu link="option=com_yeeditor&amp;view=option" view="COM_YEEDITOR_FIELD_OPTION" 
+				alt="YEEditor/Option">COM_YEEDITOR_FIELD_OPTION</menu>
+			<menu link="option=com_yeeditor&amp;view=theme" view="COM_YEEDITOR_FIELD_THEME" 
+				alt="YEEditor/Theme">COM_YEEDITOR_FIELD_THEME</menu>	
+			<menu link="option=com_yeeditor&amp;view=templates" view="COM_YEEDITOR_FIELD_TEMPLATES" 
+				alt="YEEditor/Templates">COM_YEEDITOR_FIELD_TEMPLATES</menu>	
+			<menu link="option=com_yeeditor&amp;view=install" view="COM_YEEDITOR_FIELD_INSTALL" 
+			    alt="YEEditor/Categories">COM_YEEDITOR_FIELD_INSTALL</menu>
+			<menu link="option=com_yeeditor&amp;view=extensions" view="COM_YEEDITOR_FIELD_EXTENSIONS" 
+				 alt="YEEditor/Clients">COM_YEEDITOR_FIELD_EXTENSIONS</menu>
+		</submenu>
+		<files folder="administrator/components/com_yeeditor">
+			<filename>yeeditor.php</filename>
+			<filename>controller.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>assets</folder>
+			<folder>widgets_ex</folder>
+			<folder>widget_setting_type</folder>
+			<filename>index.html</filename>
+		</files>
+		<languages folder="administrator/language/en-GB">
+			<language tag="en-GB">en-GB.com_yeeditor.ini</language>
+			<language tag="en-GB">en-GB.com_yeeditor.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

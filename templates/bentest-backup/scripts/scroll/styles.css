@@ -1,0 +1,107 @@
+
+#content_wrapper{
+	width: 1000px;
+	margin: 0px auto;
+	display: block;
+	position: relative;
+}
+#main_nav{
+	position: absolute;
+	top: 376px;
+	left: 323px;
+}
+.jScrollPaneContainer {
+overflow:hidden;
+position:relative;
+z-index:1;
+}
+.jScrollPaneTrack {
+background: url("/templates/bentest/scripts/scroll/scroll.png") repeat-y scroll 10px 0 rgba(0, 0, 0, 0);
+cursor:pointer;
+height:100%;
+position:absolute;
+right:0;
+top:0;
+}
+.jScrollPaneDrag {
+background: url("/templates/bentest/scripts/scroll/scroll_space_boy.png") no-repeat scroll 3px 0 rgba(0, 0, 0, 0);
+cursor:pointer;
+overflow:hidden;
+height: 60px !important;
+position:absolute;
+}
+.jScrollPaneDragTop {
+left:0;
+overflow:hidden;
+position:absolute;
+top:0;
+}
+.jScrollPaneDragBottom {
+bottom:0;
+left:0;
+overflow:hidden;
+position:absolute;
+}
+a.jScrollArrowUp {
+display:block;
+height:55px;
+overflow:hidden;
+position:absolute;
+right:0;
+text-indent:-2000px;
+top:0;
+z-index:1;
+}
+a.jScrollArrowUp:hover {
+}
+a.jScrollArrowDown {
+bottom:0;
+display:block;
+height:55px;
+overflow:hidden;
+position:absolute;
+right:0;
+text-indent:-2000px;
+z-index:1;
+}
+a.jScrollArrowDown:hover {
+}
+a.jScrollActiveArrowButton, a.jScrollActiveArrowButton:hover {
+}
+a.jScrollArrowUp {
+	   background: url("/templates/bentest/scripts/scroll/ship_up.png") no-repeat scroll 1px 30px rgba(0, 0, 0, 0);
+}
+a.jScrollArrowDown {
+	 background: url("/templates/bentest/scripts/scroll/ship_down.png") no-repeat scroll 0 15px rgba(0, 0, 0, 0);
+}
+.subpage .holder{
+	position: absolute;
+	top: 130px;
+	left: 260px;
+	text-align: left;
+}
+
+.scroll_pane{
+	float:left;
+	height:200px;
+	overflow:auto;
+	width:500px;
+}
+#pane{
+	height: 420px;
+}
+
+#pane .post{
+	width: 95%;
+}
+h3.storytitle{
+	margin: 5px 0px 0px 10px;
+	border-bottom: 1px solid #CE0921;
+	font-size: 15px;
+	font-weight: 600;
+}
+.storycontent{
+	margin: 5px 0px 0px 10px;
+}
+
+

@@ -1,0 +1,81 @@
+.yeeditor .style-box * {
+  margin: 32px;
+  position: relative;
+}
+.yeeditor .style-box .ye-margin {
+  border: 1px dashed #303942;
+  background-color: #f8cb9c;
+  margin: 1px;
+}
+.yeeditor .style-box .ye-margin .ye-border {
+  border: 1px solid #000000;
+  background: #fcdb9a;
+}
+.yeeditor .style-box .ye-margin .ye-border .ye-padding {
+  border: 1px dashed #808080;
+  background: #c1cd89;
+}
+.yeeditor .style-box .ye-margin .ye-border .ye-padding .ye-content {
+  border: 1px solid #808080;
+  height: 50px;
+  padding: 0px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 11px;
+  box-sizing: border-box;
+  background-color: #8ab3bf;
+}
+.yeeditor .style-box .ye-margin label {
+  position: absolute;
+  font-size: 9px;
+  line-height: 9px;
+  top: 6px;
+  right: 5px;
+  color: #2C2C2C;
+  margin: 0;
+  padding: 0;
+}
+.yeeditor .style-box .ye-margin .ye-linked {
+  position: absolute;
+  margin: 5px 0 0 19px;
+}
+.yeeditor .style-box .ye-margin input.ye-checkbox {
+  position: absolute;
+}
+.yeeditor .style-box .ye-margin input {
+  position: absolute;
+  text-align: center;
+  padding: 3px 0;
+  height: 24px;
+  width: 28px;
+  margin: 0;
+  border: none;
+  background: none;
+  font-size: 11px;
+  line-height: 11px;
+}
+.yeeditor .style-box .ye-margin input:hover,
+.yeeditor .style-box .ye-margin input:focus {
+  border: 1px solid #bdbdbd;
+  background-color: #fff;
+}
+.yeeditor .style-box .ye-margin input.ye-top {
+  top: 4px;
+  left: 50%;
+  margin-left: -15px;
+}
+.yeeditor .style-box .ye-margin input.ye-right {
+  top: 50%;
+  right: 2px;
+  margin-top: -12px;
+}
+.yeeditor .style-box .ye-margin input.ye-left {
+  top: 50%;
+  left: 2px;
+  margin-top: -12px;
+}
+.yeeditor .style-box .ye-margin input.ye-bottom {
+  bottom: 4px;
+  left: 50%;
+  margin-left: -15px;
+}

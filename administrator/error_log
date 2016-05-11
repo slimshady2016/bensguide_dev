@@ -1,0 +1,15 @@
+[14-Mar-2014 09:49:31 America/Chicago] PHP Warning:  Missing argument 3 for plgContentFinder::onContentBeforeSave() in /home/situ/public_html/plugins/content/finder/finder.php on line 50
+[14-Mar-2014 10:43:31 America/Chicago] PHP Warning:  Missing argument 3 for plgContentFinder::onContentBeforeSave() in /home/situ/public_html/plugins/content/finder/finder.php on line 50
+[14-Mar-2014 11:01:03 America/Chicago] PHP Warning:  Missing argument 3 for plgContentFinder::onContentBeforeSave() in /home/situ/public_html/plugins/content/finder/finder.php on line 50
+[14-Mar-2014 11:01:46 America/Chicago] PHP Warning:  Missing argument 3 for plgContentFinder::onContentBeforeSave() in /home/situ/public_html/plugins/content/finder/finder.php on line 50
+[14-Mar-2014 11:25:59 America/Chicago] PHP Warning:  Missing argument 3 for plgContentFinder::onContentBeforeSave() in /home/situ/public_html/plugins/content/finder/finder.php on line 50
+[14-Mar-2014 11:27:13 America/Chicago] PHP Warning:  Missing argument 3 for plgContentFinder::onContentBeforeSave() in /home/situ/public_html/plugins/content/finder/finder.php on line 50
+[14-Mar-2014 11:28:13 America/Chicago] PHP Warning:  Missing argument 3 for plgContentFinder::onContentBeforeSave() in /home/situ/public_html/plugins/content/finder/finder.php on line 50
+[14-Mar-2014 11:28:57 America/Chicago] PHP Warning:  Missing argument 3 for plgContentFinder::onContentBeforeSave() in /home/situ/public_html/plugins/content/finder/finder.php on line 50
+[18-Mar-2014 12:22:47 America/Chicago] PHP Warning:  Missing argument 3 for plgContentFinder::onContentBeforeSave() in /home/situ/public_html/plugins/content/finder/finder.php on line 50
+[25-Mar-2014 10:23:01 America/Chicago] PHP Warning:  Missing argument 3 for plgContentFinder::onContentBeforeSave() in /home/situ/public_html/plugins/content/finder/finder.php on line 50
+[25-Mar-2014 13:09:53 America/Chicago] PHP Warning:  Attempt to assign property of non-object in /home/situ/public_html/libraries/cms/editor/editor.php on line 507
+[21-Mar-2015 11:34:41 America/Chicago] PHP Warning:  array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #1 is not an array in /home/situ/public_html/libraries/cms/installer/installer.php on line 1875
+[21-Mar-2015 11:34:41 America/Chicago] PHP Warning:  array_unique() expects parameter 1 to be array, null given in /home/situ/public_html/libraries/cms/installer/installer.php on line 1875
+[21-Mar-2015 11:34:41 America/Chicago] PHP Warning:  array_merge() [<a href='function.array-merge'>function.array-merge</a>]: Argument #1 is not an array in /home/situ/public_html/libraries/cms/installer/installer.php on line 1875
+[21-Mar-2015 11:34:41 America/Chicago] PHP Warning:  array_unique() expects parameter 1 to be array, null given in /home/situ/public_html/libraries/cms/installer/installer.php on line 1875

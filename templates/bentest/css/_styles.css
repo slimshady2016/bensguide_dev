@@ -1,0 +1,1435 @@
+/*********************************************************************************/
+							/*BEN NO INDEX */
+/*********************************************************************************/
+@charset 'UTF-8';
+
+@import url(http://fonts.googleapis.com/css?family=Alegreya);/*
+	
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+	body,html,head{ width: 100%; height: 100%!important;  }
+	body{
+		background: #f5f7fa;
+		position:absolute;
+		overflow:hidden;
+	}
+.wrapper-noindex, .container, .container .row, #content_noindex{
+height:100%;
+}
+#header{
+height:auto;
+}
+	body,input,textarea,select
+	{
+		font-family: 'Alegreya', serif;
+		font-weight: 700;
+		color: #52575c;
+		font-size:12pt;
+		line-height:1.5em;
+		
+	}
+	p{font-family: 'Alegreya', serif;}
+	
+	h1,h2,h3,h4,h5,h6
+	{
+	line-height:1.5em;
+	 margin-bottom: 20px;
+	  color: #2b3c97;
+	  font-weight:bold;
+	}
+	
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+		{
+			color: inherit;
+			text-decoration: none;
+		}
+	
+	a {
+		color: inherit;
+		text-decoration: none;
+		border-bottom: dotted 1px #62676c;
+		-moz-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+		-webkit-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+		-o-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+		-ms-transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+		transition: color 0.25s ease-in-out, border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+		cursor: pointer;
+	}
+	a img:parent{
+		border: none;	
+	}
+	a.fancybox-close {
+		border: none;	
+	}
+
+		#left-nav  li a.active{
+background:#BD2314;
+}
+		
+#nav > ul > li > a img:hover {
+    max-height: 66px;
+}
+	#nav > ul > li:not(.active):hover
+			{
+				overflow: hidden;
+				max-height: 54px;
+				border-radius: 0.35em;
+				overflow: visible;
+			}
+			
+#left-nav  li:hover{
+background:#BD2314;
+}
+a:hover
+		{
+			color: #f35858!Important;
+			border-bottom-color: rgba(255,255,255,0)!Important;
+		}
+
+
+		
+	strong, b
+	{
+		font-weight: 300;
+		color: #42474c;
+	}
+	
+	em, i
+	{
+		font-style: italic;
+	}
+	
+	sub
+	{
+		position: relative;
+		top: 0.5em;
+		font-size: 0.8em;
+	}
+	
+	sup
+	{
+		position: relative;
+		top: -0.5em;
+		font-size: 0.8em;
+	}
+	
+	hr
+	{
+		border: 0;
+		border-top: solid 1px #ddd;
+	}
+	
+	blockquote
+	{
+		border-left: solid 0.5em #ddd;
+		padding: 1em 0 1em 2em;
+		font-style: italic;
+	}
+	
+	p, ul, ol, dl, table, .features
+	{
+		margin-bottom: 1.5em;
+	}
+#content ol	{	list-style-type: decimal;}
+#content ul {
+    list-style-type: disc;
+}
+#content ol li, #content ul li {
+    margin-left: 30px;
+	margin-bottom:8px
+}
+	br.clear
+	{
+		clear: both;
+	}
+
+.findersearch-main input{
+	height: 25px;
+	top: -30px;
+	position: relative;
+	left: -100px;
+	border-radius: 7px;
+	padding: 2px 5px;
+	border: 0;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 8.5pt;
+	margin-right: 10px;
+}
+
+input.search101{
+border-radius:0px;
+}
+
+h1 {
+    font-size: 24pt;
+	
+   }
+h2 {
+    font-size: 22pt;
+	
+    
+}
+h3 {
+    font-size: 20pt;
+	color:#bd2314 !important;
+	
+}
+h4 {
+    font-size: 18pt;
+	 
+  }
+h5 {
+    font-size: 16pt;
+    
+}
+h6 {
+    font-size: 16pt;
+  font-weight:normal;
+}
+
+
+
+
+/*********************************************************************************/
+/* Badge                                                                      */
+/*********************************************************************************/
+
+/*.badge-inner {
+    margin-left: 520px;
+    position: absolute;
+    top: -100px;
+    width: 160px;
+	text-align:center;
+} */
+
+.badge-inner {
+    margin-left: 560px;
+    position: fixed;
+    text-align: center;
+    top: 250px;
+    width: 160px;
+}
+
+
+
+.badge-inner img{
+margin:0;
+padding:0;
+width: 50%;
+margin: 7px 0;
+}
+.badge-inner a{
+border: none;
+}
+
+.badge-inner img.first{
+width: 50%;
+opacity:0.9;
+}
+.badge-inner img.second{
+width: 35%;
+opacity:0.7;
+}
+.badge-inner img.third{
+width: 25%;
+opacity:1;
+}
+.badge-inner img:hover{
+max-width: 50%;
+width: 100%;
+-moz-transition: width 0.45s ease-in-out,;
+-webkit-transition: width 0.45s ease-in-out;
+-o-transition: width 0.45s ease-in-out;
+-ms-transition: width 0.45s ease-in-out;
+transition: width 0.45s ease-in-out;
+}
+.rollbar-path-horizontal{
+display:none!important;
+}
+
+
+/*********************************************************************************/
+/* Wrappers                                                                      */
+/*********************************************************************************/
+
+	.wrapper	{
+		position: relative;
+		padding: 6em 0 0 0;
+		margin-bottom:65px;
+		top: 130px;
+	}
+
+	.image-wrapper	{
+		position: relative;
+	}
+	
+		.image-wrapper .image		{
+			position: relative;
+			z-index: 2;
+		}
+		
+		#utility-wrapper {
+			display: block;
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 35px;
+			background: #000033;
+			  z-index: 102;
+			  overflow:hidden;
+		}
+		
+		#utility-wrapper .container{
+		width:100%;
+		max-width:838px;
+		position:relative;
+		top: 0px;
+		display: block;
+		margin: 0 auto;
+		}
+		
+		.container{
+		top: 420px;
+		position: absolute;
+		z-index: 0px;
+		}
+		
+		#header-wrapper	{
+		position: fixed;
+		z-index: 999;
+		background-size: 100% 620%;
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 35px;
+		width: 100%;
+		height: 70px;
+		background: rgb(43,94,117);
+		background: rgba(0,0,0,0.5);
+	}
+		
+	#footer-wrapper	{
+		position: fixed;
+		bottom: 0px;
+		border-top: solid 1px #c2c7cc;
+		background:rgb(201,50,55);
+		background:rgba(201,50,55,0.8);
+		z-index:9999;
+		padding: 2px 0;
+		bottom:0;
+		width:100%;
+		display:none!important;
+	}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#logo
+	{
+		position: fixed;
+		z-index: 999999;
+		top: 40px;
+		left: 50%;
+		width: 13%;
+	 margin-left: -450px;
+		height: 4em;
+	}
+	.homepage #logo
+	{  
+		margin-left: -12.5%;
+		width: 20%;
+		}
+	#logo.logoindex
+	{
+		z-index: 1;
+		height: auto;
+	}
+	
+	#header{
+	background:rgba(0,0,0,0.5);
+	}
+
+	#logo li
+	{
+		display: block;
+      z-index:9979;
+		margin-left: -50%;
+		 height: 4em;
+    left: 50%;
+    position: fixed;
+    top: 40px;
+    width: 100%;
+		
+	}
+	
+		#logo a
+		{
+			display: block;
+			width: 100%;
+			height: 100%;
+			line-height: 4em;
+			border: 0;
+			color: #fff;
+			font-weight: 600;
+			letter-spacing: 3px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+		
+		.inner #logo a img{
+			max-width:90%;
+		width:60%;
+		z-index:9999;
+		}
+
+	#nav
+	{
+		text-align: center;
+		position: fixed;
+		top: 40px;
+		left: 0;
+		width: 100%;
+		height: 4em;
+		line-height: 4em;
+		z-index:9989;
+	}
+
+		#nav > ul
+		{
+			  margin: 0 0 0 310px;
+			top: -10px;
+			position: relative;
+		}
+		.homepage #nav > ul
+		{
+			margin: 0;
+			}
+
+			#nav > ul > li > ul
+			{
+				display: none;
+			}
+		
+			#nav > ul > li
+			{
+				display: inline-block;
+				z-index:9999;
+				margin: 0px;
+				padding: 0px;
+				height: 56px;
+			}
+			
+			#nav > ul > li.item-110 {
+				margin-left: 0%;
+			}
+			#nav > ul > li.item-155 {
+				margin-left: 0;
+			}
+				.homepage #nav > ul > li.item-155,  .homepage #nav > ul > li.item-110, .homepage #nav > ul > li.item-157 {
+				margin-left: 23%;
+			}
+			#nav > ul > li.item-157 {
+				margin-left: 0;
+			}
+				#nav > ul > li > span,
+				#nav > ul > li > a
+				{  
+					z-index:9989;
+					color: #fff;
+					text-decoration: none;
+					border: solid 1px rgba(255,255,255,0);
+					border-radius: 0.35em;
+					padding: 0.3em 1em 0.3em 1em;
+				}
+				
+			
+			#nav > ul > li > a img{
+				max-height: 46px;
+				margin-top: 8px;
+				-moz-transition: max-height 0.45s ease-in-out,;
+				-webkit-transition: max-height 0.45s ease-in-out;
+				-o-transition: max-height 0.45s ease-in-out;
+				-ms-transition: max-height 0.45s ease-in-out;
+				transition: max-height 0.45s ease-in-out;
+			}
+			
+			#header #nav > ul > li > a{
+				border: none;
+			}
+			
+			/* #nav > ul > li > a img:hover{
+				max-height: 66px;
+			} */
+			#nav > ul > li.active > span,
+			#nav > ul > li.active
+			{
+				z-index:9999;
+				text-decoration: none;
+				position: relative;
+				top: 10px;
+			}
+			
+			#nav > ul > li.active > a > img 
+				{
+				max-height: 66px;
+				margin-top: -4px;
+				}
+			#nav > ul > li:first-child
+			{
+				margin-left: -20px;
+			}
+			
+			nav#nav.learning > ul > li:nth-of-type(3) > a > img{
+				max-height: 66px;
+				margin-top: -4px;
+			}
+			.utility-nav-left{
+			width:50%;
+			float:left;
+			text-align:left;
+			}
+			.utility-nav-right{	
+			width:50%;
+			float:right;
+			text-align:right;
+			}
+.utility-nav-left ul.nav.menu, .utility-nav-right ul.nav.menu{
+	display: inline-block;
+  list-style: none outside none;
+  margin:0;
+}
+.utility-nav-left ul.nav.menu li, .utility-nav-right ul.nav.menu li{
+  display: inline-block;
+  padding: 0px 5px;
+  border-left:none;
+
+}
+#content #utility ul li {  margin:0;
+}
+.utility-nav-left ul.nav.menu li a, .utility-nav-right ul.nav.menu li a{
+    color: #FFFFFF;
+    outline: 0 none;
+    padding: 0.3em 0.5em;
+	 text-transform: uppercase;
+	 font-size:9pt;
+	 font-weight:700;
+	 text-decoration:none;
+	 border:0;
+	 line-height:35px;
+}
+.utility-nav-left ul.nav.menu li a img, .utility-nav-right ul.nav.menu li a img{
+    vertical-align: middle;
+}
+	ul.nav.menu li {
+		border: none;
+	}
+
+/*********************************************************************************/
+/* CSS for Search page                                                         */
+/*********************************************************************************/
+
+.result-text{
+	margin-bottom: 25px;
+}
+span.highlight {
+	background-color: #c4e9fb;
+}
+.result-title {
+	font-weight: bold;
+}
+.result-category {
+	color: #999;
+}
+
+/*********************************************************************************/
+/* CSS for Menu mobile                                                         */
+/*********************************************************************************/
+#home #container {
+	height: 100%;
+	margin-left: 0px;
+}
+#header-wrapper-noindex
+	{
+		position: fixed;
+		z-index: 999;
+	}
+#header-wrapper-noindex:before
+	{
+		content: '';
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 35px;
+		width: 100%;
+		height: 70px;
+		background: rgb(43,94,117);
+		background: rgba(0,0,0,0.5);
+	}
+.wrapper-noindex
+	{
+		padding: 0;
+		margin-bottom: 65px;
+		position: relative;
+		margin-top:-100px;
+	}
+
+#wrapper-noindex .banner_title
+	{
+	position: relative;
+	top: 80px;
+	z-index: 10;
+	}
+	.banner_title 	{
+		top: 150px;
+		position: relative;
+	}
+.banner_title .container
+	{
+	position: relative;
+	padding-bottom: 65px;
+	top: 80px;
+	}
+/*********************************************************************************/
+/* Footer                                                                        */
+/*********************************************************************************/
+
+	#footer
+	{
+		position: relative;
+		z-index: 1;
+		text-align:center;
+		top:0px;
+	}
+	
+.footer-text{
+color:#fff;
+font-weight:bold;
+width: 100%;
+}
+.ftext {
+    float: left;
+    margin-right: 0;
+    margin-top: 10px;
+    width: 70%;
+}
+.learn-more {
+float:left;
+width:30%;
+}
+.learn-more ul{
+margin:0px;
+}
+.learn-more a{
+float:none;
+border:1px solid #fff;
+padding:10px 15px!important;
+margin-left:20px;
+text-transform: uppercase;
+display:block;
+text-align:center;
+max-width:200px;
+min-width: 70px;
+}
+
+/*********************************************************************************/
+/* left nav                                                                    */
+/*********************************************************************************/
+
+#left-nav {
+    left: 50%;
+    margin-bottom: 0;
+    margin-left: -570px;
+    margin-right: 0;
+    margin-top: 100px;
+    position: absolute;
+    width: 250px;
+    z-index: 3;
+}
+#left-nav  li{
+background:rgb(36,76,94);
+background:rgba(36,76,94,0.8);
+margin:3px 0;
+width: 100%;
+}
+
+#left-nav  li a{
+font-size:9pt;
+font-weight:700;
+line-height:12pt;
+color:#fff!Important;
+padding:5px 10px;
+display:block;
+}
+
+
+
+/*********************************************************************************/
+/* CSS for Home Page                                                         */
+/*********************************************************************************/
+
+.ben {
+	position: fixed;
+bottom: 40px;
+width: 600px;
+margin: 0 25%;
+display: block;
+max-width: 100%;
+left: 50%;
+margin-left: -20%;
+z-index: 999;
+}
+body#home.homepage {
+background-image: url(../../../templates/bentest/images/home-bg.jpg);
+	background-position: center 85%;
+	background-repeat: no-repeat;
+	background-size: auto auto;
+	background-attachment: fixed;
+	height:100%;
+	position:fixed;
+	width:100%;
+	z-index:-1;
+	top:0;
+	}
+	.ben img.ben-avatar{
+	display: inline-block;
+	width: 70%;
+	max-width: 80%;
+	height: auto;
+	}
+	.ben .badge {
+	display: inline-block;
+	max-width: 30%;
+	height: auto;
+	}
+	.ben .badge a {
+	max-width: 150px;
+	width: 80%;
+	border: none;
+	display: block;
+	margin: 10px 0;
+	-moz-transition: width 0.45s ease-in-out, margin-left 0.45s linear;
+	-webkit-transition: width 0.45s ease-in-out, margin-left 0.45s linear;
+	-o-transition: width 0.45s ease-in-out, margin-left 0.45s linear;
+	-ms-transition: width 0.45s ease-in-out, margin-left 0.45s linear;
+	transition: width 0.45s ease-in-out, margin-left 0.45s linear;
+
+	}
+	.ben .badge a:hover {
+	width: 100%;
+	margin-left: -20px;
+	}
+	.about .badge-inner {
+    margin-right: -460px;
+    position: fixed;
+    right: 50%;
+    text-align: center;
+    top: 250px;
+    width: 160px;
+}
+.page-header h2 a, a.jScrollArrowUp{
+border:0px!important;
+}
+#content p{
+color:#000!important;
+}
+	
+@media only screen and (max-width: 767px)
+body {
+	body#home.homepage {
+background-image: url(../../../templates/bentest/images/home-bg.jpg);
+	background-position: center 85%;
+	background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: auto auto;
+height: 100%;
+	position:fixed;
+	width:100%;
+	z-index:-1;
+	top:0;
+	}
+}
+
+/*********************************************************************************/
+/* Fancy box		/    QUIZ															*/
+/*********************************************************************************/
+.main-quiz-holder{
+width: 370px!Important;
+margin: 150px auto!Important;
+	}
+#quiz-container.main-quiz-holder:before{
+display: block;
+width: 110%;
+background-color: transparent;
+content: "";
+margin-top: -50px;
+background-image: url('../../../images/topquiz1.png');
+background-attachment: scroll;
+background-position: 0px 0px;
+background-repeat: no-repeat;
+background-size: 100%;
+height: 150px;
+margin-left: -20px;
+margin-top: -150px;
+display: block;
+}
+#quiz-container.main-quiz-holder:after{
+display: block;
+width: 110%;
+background-color: transparent;
+content: "";
+background-image: url('../../../images/topquiz3.png');
+background-attachment: scroll;
+background-position: 2px 0px;
+background-repeat: no-repeat;
+background-size: 100%;
+height: 150px;
+margin-left: -20px;
+display: block;
+position: absolute;
+}
+.main-quiz-holder{
+	background: transparent!Important;
+	background-image: url('../../../images/topquiz2.png')!Important;
+background-attachment: scroll!Important;
+background-position: -20px 0px!Important;
+background-repeat: repeat-y;
+background-size: 458px!Important;
+width: 418px!Important;
+box-shadow: none!Important;
+-o-box-shadow: none!Important;
+-webkit-box-shadow: none!Important;
+border-radius: 0!Important;
+border: 1px solid transparent!Important;
+}
+.main-quiz-holder .slide-container{
+display: block;
+width: 300px!Important;
+margin-left: 55px;
+}
+
+/*********************************************************************************/
+/* Home page                                                                     */
+/*********************************************************************************/
+
+
+body#home.homepage #container #content #header-wrapper #header.container #logo {
+width: 100%;
+position: absolute;
+top: -500px;
+margin: 0 auto;
+left: 0px;
+z-index: -99;
+}
+body#home.homepage #container #content #header-wrapper #header.container #logo a{
+max-width: 50%;
+display: block;
+margin: 0 auto;
+}
+	@media only screen 
+and (max-width: 767px) {
+.ben .badge{
+max-width: 30%;
+}
+}
+
+/*********************************************************************************/
+/* about page                                                                     */
+/*********************************************************************************/
+body.about {
+background-image: url(../../../templates/bentest/images/inner-bg.jpg);
+background-attachment: fixed;
+background-color: rgba(0, 0, 0, 0);
+background-position: center 85%;
+background-repeat: no-repeat;
+background-size: auto auto;
+height: 100%;
+}
+#fixedbg {
+	background-image: url(../../../templates/bentest/images/home-bg.jpg);
+	background-position: 45% 85%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: auto auto;
+	height:100%;
+	position:fixed;
+	width:100%;
+	z-index:-1;
+	top:0;
+}
+
+#fixedbgnoindex {
+	background-image: url(../../../templates/bentest/images/inner-bg.jpg);
+	background-position: 45% 85%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: auto auto;
+	height:100%;
+	position:fixed;
+	width:100%;
+	z-index:-1;
+	top:0;
+}
+
+.banner_title{
+float:none;
+text-align:center;
+margin:20px auto;
+z-index:10;
+ max-width: 560px;
+}
+.homepage .banner_title{
+margin:5% auto;
+  max-width: auto;
+}
+.banner_title.search{
+margin: 0% auto;
+}
+
+.\36 u  {
+			margin-left:5%;
+			float: left;
+			width:47.5%;
+			margin-bottom:50px;
+		
+		}
+		.first{
+		margin-left:0;
+		}
+.\36 u img {
+    display: block;
+    width: 100%;
+}
+.clear{
+clear:both;
+}
+.inner-text-wrapper{
+max-width:638px;
+margin:-180px auto 0;
+background: rgb(255, 255, 255);
+/*background:rgba(255,255,255,0.9);*/
+float:none;
+/*z-index:-1;*/
+overflow:scroll;
+font-weight:500;
+height:65%;
+min-height:300px;
+  padding-bottom: 0px;
+    padding-left: 0;
+    padding-right: 60px !important;
+    padding-top: 100px;
+}
+
+.inner-text-wrapper #content{
+padding: 40px 20px 0;
+}
+.jScrollPaneContainer {
+    float: none;
+	background:#fff;
+    font-weight: 500;
+    margin: -200px auto 150px;
+    height: 515px!important;
+    max-width: 638px !important;
+	width:100%!important;
+    min-height: 300px;
+}
+.scroll_pane {
+    float: left;
+	width:auto!important;
+}
+
+.homepage .inner-text-wrapper #content{
+padding: 100px 0 20px 0;
+}
+.inner-text-wrapper strong{
+font-weight:bold;
+}
+.page-header {
+        margin: 0;
+	}
+.about-content-container .row{
+margin-left:0;
+}
+img, embed, object, video {
+outline: 0; max-width: 100%; height: auto;
+}
+
+
+#container{
+height: 100%;	
+}
+#content img{
+border:0!important;
+
+}
+.library-container {
+        top: 460px;
+	}
+	.about .container, .homepage .container{
+	 top: 500px;
+	}
+	#content .search-form{
+	margin-top:20px;
+	}
+	//sizes for ipad
+	@media only screen 
+and (max-device-width : 768px) 
+and (min-device-width : 1024px) {
+	#fixedbgnoindex {background:none; background-image:none;}
+	#fixedbg {background:none; background-image:none;}
+}
+
+@media only screen 
+and (max-width: 767px) {
+		.wrapper-noindex .container.about-content-container .row .inner-text-wrapper #content {
+padding-top:0px
+}
+
+}
+
+/***********************************************************************************/
+/* GAMES																		  */
+/*********************************************************************************/
+.gameimgmobile {
+display:	none;
+}
+
+@media only screen 
+and (max-width: 767px) {
+.fancybox img{
+display:	none;
+}
+.gameimgmobile {
+display:	block;
+
+}
+}
+	
+/*********************************************************************************/
+/* MEDIA QUERIES                                                                   */
+/*********************************************************************************/
+
+/*
+=============================== width more than menu ==========================
+*/
+
+	@media only screen 
+and (max-width: 767px) {
+	#utility-wrapper{display:none;}
+	#utility-wrapper{display:none;}
+	#header-wrapper:before{background:none;}
+	.inner .banner_title {margin-top: -133px;}
+	nav#nav{display:none;}
+	.wrapper-noindex
+	{
+		background:#fff;
+		height: 100%;
+	}
+	#content_noindex {
+		background-image: url(../../../templates/bentest/images/home-bg.jpg);
+		height: 100%;
+		position: relative;
+	}
+	.container.about-content-container {
+		top: 200px;}
+	.inner  #header-wrapper:before {
+		background:none;
+		}
+	#content_noindex .banner_title {
+		margin-top: -50px;
+		min-height: 200px;
+	}
+	.inner-text-wrapper {
+		background-color: #ffffff;
+		background: #ffffff;
+	}
+	#minbutton { top: 0px;}
+	#minbutton.noindex{ top: 50px;}
+	#header-wrapper {background:none; background-image:none;background-color: transparent;
+	}
+	.ben img.ben-avatar{max-width: 50%;}
+	.ben{margin-left:0px;}
+	
+	}
+
+@media only screen 
+and (max-width: 500px) {
+		.item-page {
+	top: -200px;
+	position: absolute;	
+	}
+
+}
+
+@media only screen 
+and (max-height: 400px) {
+		.ben .badge a{
+	width: 50%;
+	}
+
+}
+@media only screen 
+and (min-width: 767px) {
+	header { display:none;}
+	#minbutton {display:none;}
+	nav.mobileNav{display:none;}
+	
+	.inner  #header-wrapper:before {
+		background: rgb(43,94,117);
+		background: rgba(0,0,0,0.5);
+		}
+			
+	}
+	
+
+	
+		@media only screen 
+and (max-width: 500px){
+		#fixedbgnoindex {background:none; background-image:none;}
+
+}
+
+
+/*
+=============================== width less than 767px ==========================
+*/
+
+
+@media only screen and (max-width: 767px){
+	body {
+	background: none;
+	background-color: #f1f1f1;	
+	overflow-x:hidden;
+	overflow-y:visible;
+	}
+.container {
+    width: 100%;
+}
+.inner .inner-text-wrapper{
+min-width:300px!important;
+overflow:visible;
+padding-top:200px!important;
+}
+
+#nav > ul > li.break {
+    margin-left: 0em;
+}
+#nav {
+    bottom: 0 !important;
+    height: 50px;
+	line-height:50px;
+    left: 0;
+	top: auto;
+    
+}
+#nav > ul > li {
+    display: table-cell;
+}
+#nav > ul > li > a img {
+    width: 42%;
+}
+		.inner #header, .inner  #nav > ul{
+		background:#2F2F2F;
+		}
+	
+	.inner .banner_title {
+    background-attachment: fixed;
+    background-clip: border-box;
+	background-color: rgb(43,94,117);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("../../../templates/bentest/images/learning_mobile.png");
+   background-repeat: no-repeat;
+	background-size: 100% auto;
+	clear: both;
+	background-position: center top;
+	float: none;
+	z-index: 0;
+	height: 100%;
+	position: relative;
+	top: 0px;
+}
+
+.inner .banner_title.search {
+    background-image: url("../../../templates/bentest/images/search_mobile.png");
+}
+
+.inner .banner_title.about{
+	    background-image: url("../../../templates/bentest/images/about_mobile.png");
+}
+.inner .banner_title.libraries{
+	    background-image: url("../../../templates/bentest/images/libraries_mobile.png");
+}
+.inner .banner_title.citizenship{
+	    background-image: url("../../../templates/bentest/images/citizenship_mobile.png");
+}
+
+.inner .banner_title.parents{
+	    background-image: url("../../../templates/bentest/images/parents_mobile.png");
+}
+
+.inner .banner_title.learning{
+	    background-image: url("../../../templates/bentest/images/learning_mobile.png");
+}
+
+.inner .banner_title.games{
+	    background-image: url("../../../templates/bentest/images/games_mobile.png");
+}
+
+.inner .inner-text-wrapper {
+    margin: 0;
+    padding: 0 15px;
+	margin-top: -70px;
+	margin-bottom: 60px;
+	width: 100%;
+margin: 0 auto;
+	max-width: 100%;
+	overflow:visible!important;
+}
+body.about {
+    background-image: none;
+	height: 100%;
+	min-height: 500px;
+}
+.wrapper {
+ margin-bottom: 130px;
+    padding: 0;
+}
+
+ .badge {
+ margin-left: -150px;
+ }
+
+.footer-text{
+padding:0 15px;
+  margin-left: 0px;
+  text-align: left;
+  font-size:10pt;
+  line-height:13pt;
+}
+.ftext{
+float:left;
+width:60%;
+padding:0;
+}
+.learn-more {
+float:left;
+width:40%;
+padding-left:0;
+margin:0;
+}
+.learn-more a {
+    padding: 5px 15px !important;
+	margin-left:0;
+	}
+.banner_title img {
+    margin-left: -10%;
+    margin-right: 0;
+    margin-top: 0;
+    width: 120%;
+	max-width:150%;
+	display: none;
+}
+.inner-text-wrapper{
+padding: 100px 10px 0;
+z-index:1;
+}
+
+.inner-text-wrapper * {
+z-index:0;
+padding-bottom: 15px;
+}
+h2 {
+    font-size: 22pt;
+    line-height: 22pt;
+	}
+	.utility-nav-left {
+    width: 60%;
+}
+.utility-nav-right {
+    width: 40%;
+}
+.utility-nav-left ul li, .utility-nav-right ul li {
+    display: table-cell;
+}
+	.utility-nav-right img{
+	width:50%;
+	}
+	
+	input.findersearch-main{
+	display:none;
+	}
+	.utility-nav-left ul li, .utility-nav-right ul li {
+    margin:0;
+	padding:0;
+}
+	.utility-nav-left ul li a, .utility-nav-right ul li a {
+    font-size: 7pt;
+    padding: 0.3em 1px;
+
+}
+	.utility-nav-left ul li a img, .utility-nav-right ul li a img {
+  width:50%;
+}
+.inner #logo, .badge-inner {
+display:none;
+}
+.wrapper-noindex{
+margin-top:0;
+}
+.inner-text-wrapper {
+    max-height: auto;
+    min-height: 400px; 
+    overflow: visible;
+	}
+	.rollbar-content{
+	overflow:visible!important;
+	}
+}
+/*
+=============================== width less than 480px ==========================
+*/
+@media only screen and (max-width: 480px){
+#left-nav{
+display:none;
+
+}
+body{
+background:#fff;
+}
+#nav > ul > li > a img {
+    width: 70%;
+}
+#nav > ul > li > span, #nav > ul > li > a {
+padding:10px 0;
+}
+
+}
+
+/*
+=============================== width more than 1000px ==========================
+*/
+@media only screen and (max-width: 1024px){
+#left-nav{
+margin-left:-47%;
+left:50%;
+  padding-left: 0px;
+    position: absolute;
+    width: 17%;
+}
+
+}
+
+/*
+=============================== width more than 1000px ==========================
+*/
+@media only screen and (min-width: 1000px){
+
+}
+/*
+=============================== width more than 1024px ==========================
+*/
+
+
+/*
+=============================== width more than 1500px ==========================
+*/
+@media only screen and (min-width: 1440px){
+}
+
+
+@media only screen and (device-width: 768px) {
+  /* For general iPad layouts */
+  #logo {
+      margin-left: -400px;
+	}
+	#nav > ul {
+      margin-left: 110px;
+	}
+	.jScrollPaneContainer {
+       max-width: 470px !important;
+	}
+	.about .badge-inner {
+    margin-right: -400px;
+	}
+	.inner #logo {
+     top: 25px;
+    width: 15%;
+	}
+	.inner.about #logo {
+    top: 40px;
+    width: 15%;
+	}
+	.banner_title {
+    max-width: 450px;
+ 	}
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* For portrait layouts only */
+  #logo {
+      margin-left: -400px;
+	}
+	#nav > ul {
+      margin-left: 110px;
+	}
+	.jScrollPaneContainer {
+       max-width: 470px !important;
+	}
+	.about .badge-inner {
+    margin-right: -400px;
+	}
+	.inner #logo {
+     top: 25px;
+    width: 15%;
+	}
+	.inner.about #logo {
+    top: 40px;
+    width: 15%;
+	}
+	.banner_title {
+    max-width: 450px;
+ 	}
+}
+
+
+/*********************************************************************************/
+/* Home page    Media queries                                                                  */
+/*********************************************************************************/
+
+@media only screen 
+and (max-width: 400px) {
+body#home.homepage #container #content #header-wrapper #header.container #logo a{
+max-width: 90%;
+}
+body#home.homepage{
+background-position: 45% 85%;
+}
+#fixedbg{
+background-position: 45% 85%;
+}
+.ben img.ben-avatar {
+max-width: 70%;
+width: 65%;
+}
+}
+@media screen and ( min-height: 900px ) and ( max-height: 1200px ) and (orientation:portrait)  {
+    .inner-text-wrapper{
+height:75%;
+}
+}
+@media screen and ( min-height: 768px ) and ( max-height: 900px ) and (orientation:landscape)  {
+    .inner-text-wrapper{
+height:65%;
+}
+}
+@media screen and ( min-height: 1200px ){
+    .inner-text-wrapper{
+height:80%;
+}
+}
+    

@@ -1,0 +1,291 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary{
+  background-color: darken(@body-bg, 8%);
+  //margin: 20px -@grid-gutter-width 0;
+}
+section#content{
+	background-color: #fff;
+}
+.yee-panel:last-child,
+.yee-well:last-child{
+	margin-bottom:0;
+}
+.yee-navbar{
+	margin-bottom:0;
+}
+.yee-navbar-right {
+	ul{
+		&.pull-right{
+			right: 0;
+			left: auto;
+		}
+	}
+
+}
+.yee-panel-heading{
+	padding: 6px 3px 4px 12px;
+}
+
+.yee-row{
+	margin-bottom: 15px;
+}
+.yee-row:last-of-type{
+	margin-bottom: 0px;
+}
+nav{
+	&.yee-navbar{
+		.container-fluid{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+// Main
+.main-yee-layout {
+	padding: 20px 10px;
+}
+
+// Panel
+.yee-wgt{
+	.yee-panel:last-of-type{
+		margin-bottom:10px;
+	}
+}
+.yee-panel {
+	border-width: @panel-border;
+	.box-shadow(0 1px 2px rgba(0,0,0,.075));
+	.yee-panel-heading{
+		border-bottom-width: @panel-border;
+		padding-bottom: 0;
+		background-color:@panel-bg;
+	}
+	.yee-panel-body{
+		padding: 6px 10px 10px;
+	}
+	.yee-panel-footer{
+		border-top-width: @panel-border;
+	}
+}
+
+// Well
+.yee-well{
+	&:last-of-type{
+		margin-bottom: 0;
+	}
+	.yee-wgt{
+		min-height: 60px;
+	}
+}
+.yee-accordion-inner{
+	.yee-well{
+		.yee-wgt{
+			margin-top: 0px;
+		}
+
+	}
+}
+.yee-well-sm {
+  padding: 5px;
+}
+
+// 
+.yee-btn-group > .yee-btn + .yee-dropdown-toggle{
+	padding: 7px 8px 6px 5px;
+	line-height: 1px;
+}
+
+
+//
+// Modals
+// --------------------------------------------------
+.yee-modal{
+  .yee-modal-dialog{
+    margin:10% auto;
+  }
+  .yee-tab-content{
+  	overflow: inherit;
+  }
+  .yee-modal-content {  
+    border-radius: @border-radius-base;
+    .box-shadow(0 3px 9px rgba(0,0,0,.5));
+    background-clip: padding-box;
+    // Remove focus outline from opened modal
+    outline: none;
+    .yee-modal-header{
+      padding: 5px 10px;
+    }
+    .yee-modal-body{
+      padding: 10px;
+    }
+    .yee-modal-footer{
+      padding: 5px 10px;
+    }
+    button.yee-close{
+      padding: 0 0 0 10px;
+    }
+  }
+}
+@media (min-width: 768px){
+  body .yee-modal .yee-modal-lg {
+    width: 760px;
+  }
+}
+@media (max-width: 990px) and (min-width: 852px){
+  body .yee-modal .yee-modal-lg {
+    width: 850px;
+  }
+}
+@media (max-width: 1160px) and (min-width: 990px){
+  body .yee-modal .yee-modal-lg {
+    width: 900px;
+  }
+}
+
+@media (max-width: 1300px) and (min-width: 1160px){
+  body .yee-modal .yee-modal-lg {
+    width: 1120px;
+  }
+}
+
+@media (max-width: 1469px) and (min-width: 1300px){
+  body .yee-modal .yee-modal-lg {
+    width: 1296px;
+  }
+}
+@media (min-width: 1580px) {
+  body .yee-modal .yee-modal-lg {
+    width: 1472px;
+  }
+}
+@media (max-width: 1580px) and (min-width: 1469px){
+  body .yee-modal .yee-modal-lg {
+    width: 1472px;
+  }
+}
+
+// Accordion
+.yee-accordion-inner{
+	padding: 0;
+	border: none;
+}
+
+// Panel Meta Edit Icon
+.yee-wgt{
+	.yee-panel{
+		margin-bottom:5px;
+		.yee-panel-body{
+			.yee-widget_content{
+				position: relative;
+				.yee-wgt-setting{
+					position: absolute;
+					right: 0;
+				}
+			}
+		}
+	}
+}
+
+// Accordion Admin reset (note, please this below .yee-panel)
+.yee-wgt-faq,.yee-wgt-accordion{
+	.yee-panel{
+		background-color: @panel-bg;
+		overflow: inherit;
+		border: 1px solid transparent;
+		margin-bottom: 0;
+		border-radius: @panel-border-radius;
+		.yee-panel-heading{
+			padding: 10px 15px;
+		}
+	}
+}
+.yee-wgt-faq{
+	.yee-panel-group{
+		margin: 5px 0 3px;
+	}
+}
+.yee-wgt-faq,.yee-wgt-accordion{
+	.yee-panel-default {
+	  .panel-variant(@panel-default-border; @panel-default-text; @panel-default-heading-bg; @panel-default-border);
+	}
+}
+.yee-wgt-faq,.yee-wgt-accordion{
+	.yee-panel-primary {
+	  .panel-variant(@panel-primary-border; @panel-primary-text; @panel-primary-heading-bg; @panel-primary-border);
+	}
+}
+.yee-wgt-faq,.yee-wgt-accordion{
+	.yee-panel-success {
+	  .panel-variant(@panel-success-border; @panel-success-text; @panel-success-heading-bg; @panel-success-border);
+	}
+}
+.yee-wgt-faq,.yee-wgt-accordion{
+	.yee-panel-info {
+	  .panel-variant(@panel-info-border; @panel-info-text; @panel-info-heading-bg; @panel-info-border);
+	}
+}
+.yee-wgt-faq,.yee-wgt-accordion{
+	.yee-panel-warning {
+	  .panel-variant(@panel-warning-border; @panel-warning-text; @panel-warning-heading-bg; @panel-warning-border);
+	}
+}
+.yee-wgt-faq,.yee-wgt-accordion{
+	.yee-panel-danger {
+	  .panel-variant(@panel-danger-border; @panel-danger-text; @panel-danger-heading-bg; @panel-danger-border);
+	}
+}
+
+// Admin Tab Widget
+.yee-modal,
+.yee-wgt-tabs {
+	.yee-nav-tabs{
+		margin-left: 0; //Cancel out bootstrap 2 ul, ol margin
+		>li.active{
+			>a{
+				background-color: @well-bg;
+			}
+		}
+	}
+	.yee-tab-content{
+		.yee-well{
+			border-top-width: 0;
+			.box-shadow(inset 0 0px 0px rgba(0,0,0,.05));
+		}
+	}
+}
+.yee-modal{
+	.yee-tab-content{
+		padding: 5px 15px;
+		background: #f5f5f5;
+		border: 1px solid #ddd;
+		border-top-width: 0;
+	}
+}
+// YEEditor Columns setting icon sets
+.yee-col-settings{
+	margin-top: 6px;
+}
+
+// Admin Carousel
+.yee-widget-content{
+	.yee-wgt-photo-gallery,
+	.yee-wgt-carousel{
+		ul.yee-images-list{
+			margin:0;
+			overflow: hidden;
+			li{
+				float:left;
+				padding-right: 5px;
+			}
+		}
+	}
+}

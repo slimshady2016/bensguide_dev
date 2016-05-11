@@ -1,0 +1,83 @@
+/*
+frontend custom css
+*/
+.yee-widget{
+	margin-bottom:30px;
+}
+.yeeditor img{
+	max-width:100%;
+}
+
+/* column class yee-col-2-4(1/5) */
+.yee-col-xs-2-4, .yee-col-sm-2-4, .yee-col-md-2-4, .yee-col-lg-2-4 {
+	position: relative;
+	min-height: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.yee-col-xs-2-4 {
+	float: left;
+}
+.yee-col-xs-2-4 {
+  width: 20%;
+}
+.yee-col-xs-pull-2-4 {
+  right: 20%;
+}
+.yee-col-xs-push-2-4 {
+  left: 20%;
+}
+.yee-col-xs-offset-2-4 {
+  margin-left: 20%;
+}
+@media (min-width: 768px) {
+.yee-col-sm-2-4 {
+	float: left;
+}
+.yee-col-sm-2-4 {
+    width: 20%;
+}
+.yee-col-sm-pull-2-4 {
+    right: 20%;
+}
+.yee-col-sm-push-2-4 {
+    left: 20%;
+}
+.yee-col-sm-offset-2-4 {
+    margin-left: 20%;
+}
+}
+@media (min-width: 992px) {
+.yee-col-md-2-4 {
+	float: left;
+}
+.yee-col-md-2-4 {
+    width: 20%;
+}
+.yee-col-md-pull-2-4 {
+    right: 20%;
+}
+.yee-col-md-push-2-4 {
+    left: 20%;
+}
+.yee-col-md-offset-2-4 {
+    margin-left: 20%;
+}
+}
+@media (min-width: 1200px) {
+.yee-col-lg-2-4 {
+	float: left;
+}
+.yee-col-lg-2-4 {
+    width: 20%;
+}
+.yee-col-lg-pull-2-4 {
+    right: 20%;
+}
+.yee-col-lg-push-2-4 {
+    left: 20%;
+}
+.yee-col-lg-offset-2-4 {
+    margin-left: 20%;
+}
+}

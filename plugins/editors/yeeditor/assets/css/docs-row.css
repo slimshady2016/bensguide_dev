@@ -1,0 +1,108 @@
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);*/
+.yet-nopad {
+  overflow: hidden;
+}
+/*.yet-nopad .yee-container .row,
+.yet-nopad .yee-container-fluid .row {
+  margin-right: -30px;
+  margin-left: -30px;
+}*/
+.yet-nopad .yee-container,
+.yet-nopad .yee-container-fluid {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.yet-pad .yee-container .row,
+.yet-pad .yee-container-fluid .row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.help-block h5 {
+  margin-top: 0;
+}
+.help-block ul {
+  padding-left: 17px;
+  margin-bottom: 0;
+}
+.btn-group-vertical .btn.text-right {
+  text-align: right;
+}
+.btn-group-vertical .btn.text-left {
+  text-align: left;
+}
+.btn-group-vertical.text-left .btn {
+  text-align: left;
+}
+.btn-group-vertical.text-left .btn.text-right {
+  text-align: right;
+}
+.btn-group-vertical.text-left .btn.text-center {
+  text-align: center;
+}
+.btn-group-vertical.text-center .btn {
+  text-align: center;
+}
+.btn-group-vertical.text-center .btn.text-right {
+  text-align: right;
+}
+.btn-group-vertical.text-center .btn.text-left {
+  text-align: left;
+}
+.btn-group-vertical.text-right .btn {
+  text-align: right;
+}
+.btn-group-vertical.text-right .btn.text-left {
+  text-align: left;
+}
+.btn-group-vertical.text-right .btn.text-center {
+  text-align: center;
+}
+.btn-search i.fa {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+}
+.btn-search i.fa + input.form-control {
+  padding-left: 26px;
+}
+.btn-group.btn-group-justified-search .btn-group .btn {
+  padding: 13px 0;
+}
+.pager.text-left {
+  text-align: left;
+}
+.pager.text-right {
+  text-align: right;
+}
+.show-grid [class^=col-] {
+  border: 1px solid rgba(86, 61, 124, 0.2);
+  background-color: rgba(86, 61, 124, 0.15);
+}
+nav#nav-mainmenu {
+  margin-bottom: 0;
+}
+.highlight {
+  padding: 9px 0px;
+  margin-top: 0px;
+  margin-bottom: 14px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+.highlight code {
+  padding: 2px 0;
+}
+.yet-example .modal {
+  position: relative;
+  top: auto;
+  right: auto;
+  left: auto;
+  bottom: auto;
+  z-index: 1;
+  display: block;
+}
+.text-rotate {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  writing-mode: tb-rl;
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <extension type="package" version="3.0">
+ <name>YEEditor</name>
+ <author>YEEDEEN</author>
+ <creationDate>DEC 6 2013</creationDate>
+ <packagename>Yeeditor</packagename>
+ <version>2.01</version>
+ <url>http://www.yeeditor.com/</url>
+ <copyright>Copyright (C) 2013</copyright>
+ <license>GNU General Public License version 2 or later; see http://yeedeen.com/license</license>
+ <packager>feng</packager>
+ <packagerurl>http://www.yeeditor.com/</packagerurl>
+ <description></description>
+ <update>http://dev.yeedeen.com/agility/</update>
+ <scriptfile>install.yeeditor.php</scriptfile>
+ <files folder="pkg_Yeeditor">
+   <file type="plugin" id="yeeditor" group="editors">plg_yeeditor.zip</file>
+   <file type="plugin" id="yeeditor_content" group="system">plg_yeeditor_content.zip</file>
+   <file type="plugin" id="yeeditor_content" group="search">plg_search_yeeditor_content.zip</file>
+   <file type="plugin" id="k2_yeeditor_content" group="search">plg_search_k2_yeeditor_content.zip</file>
+   <file type="component" id="com_yeeditor" >com_yeeditor.zip</file>
+ </files>
+ </extension>

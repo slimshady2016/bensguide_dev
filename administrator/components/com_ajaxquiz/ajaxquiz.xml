@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+
+	<name>Ajax Quiz</name>
+	<!-- The following elements are optional and free of formatting conttraints -->
+	<creationDate>07/07/2011</creationDate>
+	<author>Webkul</author>
+	
+	<copyright>Copyright (C) 2012 Christophe Demko. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<!--  The version string is recorded in the components table -->
+	<version>2.0</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>Ajax Quiz installed</description>
+ 
+	<!-- Runs on install/uninstall/update; New in 1.6 -->
+	<scriptfile>script.php</scriptfile>
+ 
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+ 
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder
+		to copy FROM in the package to install therefore files copied
+		in this section are copied from /site/ in the package -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>ajaxquiz.php</filename>
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		<folder>assets</folder>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>language</folder>
+	</files>
+ 
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_ajaxquiz.ini</language>
+		<language tag="nl-NL">language/nl-NL/nl-NL.com_ajaxquiz.ini</language>
+	</languages>
+	<installfile>install.ajaxquiz.php</installfile>
+	<uninstallfile>uninstall.ajaxquiz.php</uninstallfile>
+
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu img="components/com_ajaxquiz/images/main.png">COM_AJAXQUIZ</menu>
+		
+		<submenu>
+			<!--
+				Note that all & must be escaped to &amp; for the file to be valid
+				XML and be parsed by the installer
+			-->
+			<menu link="option=com_ajaxquiz&amp;view=categories" view="categories" img="">COM_AJAXQUIZ_SUBMENU_CATEGORIES</menu>
+			<menu link="option=com_ajaxquiz&amp;view=questions" view="questions" img="">COM_AJAXQUIZ_SUBMENU_QUESTIONS</menu>
+			<menu link="option=com_ajaxquiz&amp;view=answers" view="answers" img="">COM_AJAXQUIZ_SUBMENU_ANSWERS</menu>
+			<menu link="option=com_ajaxquiz&amp;view=result" view="result" img="">COM_AJAXQUIZ_SUBMENU_RESULTS</menu>
+			<menu link="option=com_ajaxquiz&amp;view=import" view="import" img="">COM_AJAXQUIZ_SUBMENU_IMPORT</menu>
+			<menu link="option=com_ajaxquiz&amp;view=fbfanpage" view="fbfanpage" img="">COM_AJAXQUIZ_SUBMENU_FACEBOOK</menu>
+			<menu link="option=com_ajaxquiz&amp;view=templates" view="templates" img="">COM_AJAXQUIZ_SUBMENU_TEMPLATES</menu>
+			<menu link="option=com_ajaxquiz&amp;view=backup" view="backup" img="">COM_AJAXQUIZ_SUBMENU_BACKUP</menu>
+		</submenu>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>ajaxquiz.php</filename>		
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+			<folder>controllers</folder>
+			<folder>sql</folder>
+			<folder>language</folder>
+			<folder>assets</folder>
+			<folder>install</folder>
+		</files>
+ 
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_ajaxquiz.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_ajaxquiz.sys.ini</language>
+			<language tag="nl-NL">language/nl-NL/nl-NL.com_ajaxquiz.ini</language>
+			<language tag="en-GB">language/nl-NL/nl-NL.com_ajaxquiz.sys.ini</language>
+		</languages>
+	</administration>
+  
+</extension>

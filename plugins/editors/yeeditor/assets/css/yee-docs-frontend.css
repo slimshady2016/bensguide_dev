@@ -1,0 +1,23 @@
+/* widget margin bottom */
+div.yee .widget{margin-bottom:30px;}
+
+/* start of modification for 5 columns */
+   @media (min-width: 768px){
+		div.yee .row-fluid .span2_4 {
+		    width: 18.297872340425532%;
+		    *width: 18.2234042553191494%;
+		}
+	}
+	@media (min-width: 1200px) {
+		div.yee .row-fluid .span2_4 {
+			width: 17.9487179487179488%;
+			*width: 17.87424986361156592%;
+	    }
+	}
+	@media (min-width: 768px) and (max-width: 979px) {
+		div.yee .row-fluid .span2_4 {
+			width: 17.79005524861878448%;
+			*width: 17.7155871635124022%;
+		}
+	}
+/* end of modification for 5 columns */
